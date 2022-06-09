@@ -1,5 +1,4 @@
 import * as React from 'react';
-import logo from './logo.svg';
 import './css/App.css';
 import Home from './view/homepage';
 import Indicatori from './view/IndicatorsTier';

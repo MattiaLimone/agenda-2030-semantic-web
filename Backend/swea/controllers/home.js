@@ -16,7 +16,7 @@ const myEngine = new QueryEngine();
 
 
 exports.allHomeCountryAndSources = async (req, res, next) => {
-    const t = [], s = [];
+    const response = [];
 
     const bindingsStream = await myEngine.queryBindings(`
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -45,20 +45,20 @@ exports.allHomeCountryAndSources = async (req, res, next) => {
     bindingsStream.on('data', (binding) => {
         var jsonData = {};
         jsonData['goal'] = binding.get('goal').value;
-        jsonData['goal_label'] = binding.get('labelTarget').value;
+        jsonData['goal_label'] = binding.get('labelGoal').value;
         jsonData['goal_comment'] = binding.get('commentGoal').value;
         jsonData['target'] = binding.get('target').value;
-        jsonData['target_label'] = binding.get('labelGoal').value;
+        jsonData['target_label'] = binding.get('labelTarget').value;
         jsonData['target_comment'] = binding.get('commentTarget').value;
         jsonData['indicator'] = binding.get('indicator').value;
         jsonData['indicator_label'] = binding.get('labelIndicator').value;
         jsonData['indicator_comment'] = binding.get('commentIndicator').value;
 
-        t.push(jsonData)
+        response.push(jsonData)
     });
 
     bindingsStream.on('end', () => {
-        return res.json({ territories: t, sources: s });
+        return res.json({ result: response });
     });
 
     bindingsStream.on('error', (error) => {
