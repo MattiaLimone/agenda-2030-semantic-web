@@ -13,7 +13,7 @@ router.get("/trytest", tryController.test);
 router.get("/localTest", tryController.localOntology);
 
 //home Routes
-router.get("/allHomeCountryAndSources", homeController.allHomeCountryAndSources);
+router.get("/homepage", homeController.allHomeCountryAndSources);
 
 //Territory Routes
 router.get("/allCountry", territoryController.allCountry);
