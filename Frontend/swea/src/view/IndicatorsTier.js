@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Home() {
+function Indicatori() {
   return (
     <div className='home'>
-      <h1>Home</h1>
+      <h1>INDICATORI</h1>
     </div>
   );
 }
 
-export default Home;
+export default Indicatori;

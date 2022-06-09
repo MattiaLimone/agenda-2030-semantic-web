@@ -3,7 +3,11 @@ import logo from './logo.svg';
 import './css/App.css';
 import {TerritoryPage} from './view/territorypage';
 import {SourcePage} from './view/sourcepage';
-import {HomePage, PreLoadingPage} from './view/homepage';
+import PreLoadingPage from './view/homepage';
+import Home from './view/homepage';
+import Indicatori from './view/IndicatorsTier';
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
 
@@ -17,7 +21,7 @@ function App() {
     let selected = null;
     var builder = null;
     if (page_id == 0) {
-      setPageid(page_id);
+      setPageid(page_id); 
     }
     if (page_id == 1) {
       // Territory call
@@ -172,39 +176,15 @@ function App() {
   if (homedata_source == null && pageid == -1) loadingData_main();
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <div>
-          {
-            pageid == -1 ? <PreLoadingPage/>
-            : pageid == 0 ? <HomePage territories={homedata_source.t} sources={homedata_source.s} changePageCallback={changePage}/>
-            : pageid == 1 ?
-              <TerritoryPage 
-                name={territory_data.name} 
-                definition = {territory_data.definition}
-                description = {territory_data.description} 
-                sources = {territory_data.placedSources}
-                criteria = {territory_data.criterias}
-                companies = {territory_data.placedCompanies}
-                image = {territory_data.thumb}
-                changePageCallback={changePage}
-              />
-            : pageid == 2 ?
-              <SourcePage 
-                address = {source_data.address}
-                name={source_data.name} 
-                definition = {source_data.definition}
-                description = {source_data.description} 
-                criteria = {source_data.criterias}
-                territories = {source_data.placedTerritories}
-                image = {source_data.thumb}
-                changePageCallback={changePage}
-              />
-            : <div></div>
-          }
-        </div>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Navbar/>
+        <Routes>
+          <Route path='/' exact component={Home} />
+          <Route path='/indicatori' exact component={Indicatori} />
+        </Routes>
+      </Router>
+    </>
   );
 
 }
