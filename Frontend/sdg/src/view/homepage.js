@@ -1,7 +1,7 @@
 import { React, useEffect, useState } from 'react';
 import { Grid, Modal, Typography, Box, Button, Fab } from '@mui/material';
 import ReadMoreIcon from '@mui/icons-material/ReadMore';
-
+import { useNavigate } from 'react-router-dom';
 const style = {
   position: 'absolute',
   top: '50%',
@@ -16,7 +16,7 @@ const style = {
 };
 
 export default function Home() {
-
+  let navigate = useNavigate(); 
   const [data, setData] = useState(new Array());
   const [loading, setLoading] = useState(false);
   const [currItem, setItem] = useState(null)
@@ -27,7 +27,9 @@ export default function Home() {
     setOpen(true)
     setItem(item)
   };
-
+  function routeChange(path) {  
+    navigate("/goal",{ state: { id: path} });
+  }
   var getData = () => {
     fetch('http://localhost:8080/homepage')
       .then(res => res.json())
@@ -83,7 +85,7 @@ export default function Home() {
               Source: <a href={currItem.goal_source}>{currItem.goal_source}</a>
             </Typography>
             <div >
-              <Fab variant="extended" color="primary" aria-label="add" style={{position: 'absolute',bottom:50,right:50,}}>
+              <Fab variant="extended" color="primary" aria-label="add" style={{position: 'absolute',bottom:50,right:50,}} onClick={() => routeChange(currItem.goal_label)}>
                 <ReadMoreIcon sx={{ mr: 1 }} />
                   Read more
               </Fab>
