@@ -11,9 +11,13 @@ function Indicatori(props) {
         } 
       }, []);
   return (
-    <div className='home'>
-      <h1>{state === null ? <></>:state.id}</h1>
-    </div>
+    <>
+      {state === null ? null:
+        <div className='home'>
+          <h1>{state.id}</h1>
+        </div>
+      }
+    </>
   );
 }
 
