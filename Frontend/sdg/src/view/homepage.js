@@ -16,7 +16,7 @@ const style = {
 };
 
 export default function Home() {
-  let navigate = useNavigate(); 
+  let navigate = useNavigate();
   const [data, setData] = useState(new Array());
   const [loading, setLoading] = useState(false);
   const [currItem, setItem] = useState(null)
@@ -27,8 +27,8 @@ export default function Home() {
     setOpen(true)
     setItem(item)
   };
-  function routeChange(path) {  
-    navigate("/goal",{ state: { id: path} });
+  function routeChange(path) {
+    navigate("/goal", { state: { id: path } });
   }
   var getData = () => {
     fetch('http://localhost:8080/homepage')
@@ -85,9 +85,9 @@ export default function Home() {
               Source: <a href={currItem.goal_source}>{currItem.goal_source}</a>
             </Typography>
             <div >
-              <Fab variant="extended" color="primary" aria-label="add" style={{position: 'absolute',bottom:50,right:50,}} onClick={() => routeChange(currItem.goal_label)}>
+              <Fab variant="extended" color="primary" aria-label="add" style={{ position: 'absolute', bottom: 50, right: 50, }} onClick={() => routeChange(currItem.goal_label)}>
                 <ReadMoreIcon sx={{ mr: 1 }} />
-                  Read more
+                Read more
               </Fab>
             </div>
           </div>
