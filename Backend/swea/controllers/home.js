@@ -12,7 +12,7 @@ const myEngine = new QueryEngine();
     IMPORTANT: Make sure that the relative or absolute path of the file does not contain spaces...*/
 
 
-exports.allHomeCountryAndSources = async (req, res, next) => {
+exports.getData = async (req, res, next) => {
     const response = [];
     
     const goal = [];

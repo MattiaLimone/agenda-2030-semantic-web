@@ -87,7 +87,7 @@ export default function Home() {
             <div >
               <Fab variant="extended" color="primary" aria-label="add" style={{ position: 'absolute', bottom: 50, right: 50, }} onClick={() => routeChange(currItem.goal_label)}>
                 <ReadMoreIcon sx={{ mr: 1 }} />
-                Read more
+                Read more...
               </Fab>
             </div>
           </div>

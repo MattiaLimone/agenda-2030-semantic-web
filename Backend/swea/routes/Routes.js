@@ -4,6 +4,7 @@ const router = express.Router();
 const tryController = require("../controllers/try");
 
 const homeController = require("../controllers/home");
+const goalController = require("../controllers/goal")
 const territoryController = require("../controllers/Territory");
 const sourcesController = require("../controllers/Sources");
 const companyController = require("../controllers/Company");
@@ -13,8 +14,10 @@ router.get("/trytest", tryController.test);
 router.get("/localTest", tryController.localOntology);
 
 //home Routes
-router.get("/homepage", homeController.allHomeCountryAndSources);
-
+router.get("/homepage", homeController.getData);
+//goal Routes
+router.get("/getGoalInfo", goalController.getGoalData);
+router.get("/getTargetInfo", goalController.getTargetData);
 //Territory Routes
 router.get("/allCountry", territoryController.allCountry);
 router.get("/singleCountryInformations", territoryController.singleCountryInf);
