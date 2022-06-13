@@ -95,8 +95,8 @@ function Indicatori(props) {
     setExpanded(isExpanded ? panel : false);
   };
 
-  function routeChange(path) {
-    navigate("/target", { state: { id: path } });
+  function routeChange(id, path) {
+    navigate(path, { state: { id: id } });
   }
   function hyperLinkChange(path) {
     window.location.href = path;
@@ -152,7 +152,7 @@ function Indicatori(props) {
                     {subjectData.map((item,index) => {
                       return(
                         <div>
-                          <Button key={index} onClick={() => hyperLinkChange(item.url)} variant="outlined" style={{margin: 5}}>{item.label}</Button>
+                          <Button key={index} onClick={() => routeChange(item.label,"/corrConcept")} variant="outlined" style={{margin: 5}}>{item.label}</Button>
                         </div>
                       )
                     })}
@@ -175,7 +175,7 @@ function Indicatori(props) {
                     <Typography>
                       {item.comment}
                     </Typography>
-                    <Fab variant="extended" color="primary" aria-label="add" style={{ marginBottom: '15', alignSelf: 'flex-end' }} onClick={() => routeChange(item.label)}>
+                    <Fab variant="extended" color="primary" aria-label="add" style={{ marginBottom: '15', alignSelf: 'flex-end' }} onClick={() => routeChange(item.label, "/target")}>
                       <ReadMoreIcon sx={{ mr: 1 }} />
                       Read more...
                     </Fab>
