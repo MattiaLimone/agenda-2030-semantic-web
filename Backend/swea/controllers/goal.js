@@ -11,9 +11,10 @@ const myEngine = new QueryEngine();
     IMPORTANT: the exported file from protege, must be a .ttl
     IMPORTANT: Make sure that the relative or absolute path of the file does not contain spaces...*/
 
-
+/*
+*/
 exports.getGoalData = async (req, res, next) => {
-    
+
     const response = [];
 
     const bindingsStream = await myEngine.queryQuads(`
@@ -25,20 +26,21 @@ exports.getGoalData = async (req, res, next) => {
     DESCRIBE ?goal
     WHERE {
         ?goal a sdg:Obiettivo.
-        ?goal rdfs:label "`+req.query.res+`"@it .
+        ?goal rdfs:label "`+ req.query.res + `"@it .
     }
-    `, {sources: ['http://localhost:3000/sparql'],
+    `, {
+        sources: ['http://localhost:3000/sparql'],
     });
     bindingsStream.on('data', (quad) => {
         let item = {
             "subject": quad.subject.value,
             "predicate": quad.predicate.value,
-            "object":quad.object.value
+            "object": quad.object.value
         }
         response.push(item)
     });
     bindingsStream.on('end', () => {
-        
+
         return res.json({ result: response });
     });
     bindingsStream.on('error', (error) => {
@@ -47,8 +49,9 @@ exports.getGoalData = async (req, res, next) => {
 
 }
 
+
 exports.getTargetData = async (req, res, next) => {
-    
+
     const response = [];
 
     const bindingsStream = await myEngine.queryBindings(`
@@ -60,28 +63,70 @@ exports.getTargetData = async (req, res, next) => {
     SELECT ?target ?labelTarget ?commentTarget
     WHERE {
         ?goal a sdg:Obiettivo.
-        ?goal rdfs:label "`+req.query.res+`"@it .
+        ?goal rdfs:label "`+ req.query.res + `"@it .
         ?target a sdg:Target.
         ?target sdg:is_target_of ?goal.
         ?target rdfs:label ?labelTarget.
         ?target rdfs:comment ?commentTarget.
     }
-    `, {sources: ['http://localhost:3000/sparql'],
+    `, {
+        sources: ['http://localhost:3000/sparql'],
     });
     bindingsStream.on('data', (binding) => {
         const REGEXP = /\d+/g;
         index = binding.get('labelTarget').value.match(REGEXP)[1]
-        
+
         let item = {
             'index': index,
-            'target':binding.get('target').value,
-            'label':binding.get('labelTarget').value,
-            'comment':binding.get('commentTarget').value
+            'target': binding.get('target').value,
+            'label': binding.get('labelTarget').value,
+            'comment': binding.get('commentTarget').value
         }
         response.push(item)
     });
     bindingsStream.on('end', () => {
+
+        return res.json({ result: response });
+    });
+    bindingsStream.on('error', (error) => {
+        console.error(error);
+    });
+
+}
+
+exports.getSubjectData = async (req, res, next) => {
+
+    let response = [];
+
+    const bindingsStream = await myEngine.queryBindings(`
+    PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+    PREFIX sdg: <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg#> 
+    
+    SELECT ?subject ?label
+    WHERE {
+        ?goal a sdg:Obiettivo.
+          ?goal rdfs:label '`+ req.query.res + `'@it.
+          ?subject a skos:Concept.
+          ?goal sdg:has_subject ?subject.
+        ?subject skos:prefLabel ?label.
+          FILTER(LANG(?label) = 'en')
         
+    }
+    `, {
+        sources: ['http://localhost:3000/sparql'],
+    });
+    bindingsStream.on('data', (binding) => {
+        let item = {
+            'url': binding.get('subject').value,
+            'label': binding.get('label').value
+        }
+        response.push(item)
+    });
+    bindingsStream.on('end', () => {
+
         return res.json({ result: response });
     });
     bindingsStream.on('error', (error) => {

@@ -18,6 +18,7 @@ router.get("/homepage", homeController.getData);
 //goal Routes
 router.get("/getGoalInfo", goalController.getGoalData);
 router.get("/getTargetInfo", goalController.getTargetData);
+router.get("/getSubjectInfo", goalController.getSubjectData);
 //Territory Routes
 router.get("/allCountry", territoryController.allCountry);
 router.get("/singleCountryInformations", territoryController.singleCountryInf);
