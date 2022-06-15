@@ -34,7 +34,7 @@ exports.getData = async (req, res, next) => {
         ?goal sdg:has_source ?sourceGoal.
     }
     `, {sources: ['http://localhost:3000/sparql'],
-    });
+    }); 
     bindingsStream.on('data', (binding) => {
         const REGEXP = /\d+/g;
         index = binding.get('labelGoal').value.match(REGEXP)

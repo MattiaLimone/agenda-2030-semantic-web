@@ -4,6 +4,7 @@ import Home from './view/homepage';
 import Indicatori from './view/indicatori';
 import Goal from './view/goal';
 import CorrConcept from './view/corrConcept';
+import Search from './view/search';
 import Navbar from './components/Navbar';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -18,6 +19,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/indicatori' element={<Indicatori />} />
           <Route path='/goal' element={<Goal />} />
+          <Route path='/search' element={<Search />} />
           <Route path='/corrConcept' element={<CorrConcept />} />
           <Route path='/indicators' element={<Indicatori />} />
         </Routes>

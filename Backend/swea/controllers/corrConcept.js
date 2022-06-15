@@ -72,7 +72,7 @@ exports.getCorrelatedConceptLabel = async (req, res, next) => {
         ?Concept skos:prefLabel ?prefLabel.
   		FILTER(lang(?prefLabel)='en' && STR(?Concept)= "`+ req.query.res + `")
     }
-    `, {sources: ['http://localhost:3030/tes/sparql'],
+    `, {sources: ['http://localhost:3030/unbis/sparql'],
     });
     bindingsStream.on('data', (binding) => {
         

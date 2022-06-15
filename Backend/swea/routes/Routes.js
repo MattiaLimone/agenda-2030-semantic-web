@@ -5,12 +5,9 @@ const tryController = require("../controllers/try");
 
 const homeController = require("../controllers/home");
 const goalController = require("../controllers/goal")
-const territoryController = require("../controllers/Territory");
-const sourcesController = require("../controllers/Sources");
-const companyController = require("../controllers/Company");
 const correlatedConceptController = require("../controllers/corrConcept");
 const indicatorController = require("../controllers/indicatori");
-const criteriaController = require("../controllers/Criteria");
+const subjectController = require("../controllers/subject");
 
 router.get("/trytest", tryController.test);
 router.get("/localTest", tryController.localOntology);
@@ -27,33 +24,9 @@ router.get("/getMetaCorConceptLabel", correlatedConceptController.getCorrelatedC
 //indicators Routes
 router.get("/getIndicators", indicatorController.getIndicators);
 router.get("/getTiers", indicatorController.getTiers);
-//Territory Routes
-router.get("/allCountry", territoryController.allCountry);
-router.get("/singleCountryInformations", territoryController.singleCountryInf);
-router.get("/singleCountrySourcesRelated", territoryController.singleCountrySourcesRelated);
-router.get("/singleCountryCriteriaRelated", territoryController.singleCountryCriteriaRelated);
-router.get("/singleCountryCompaniesRelated", territoryController.singleCountryCompaniesRelated);
-
-//Sources Routes
-router.get("/allSources", sourcesController.allEnergySources);
-router.get("/singleEnergyInformations", sourcesController.singleEnergyInf);
-router.get("/singleSourceCountriesRelated", sourcesController.singleSourceCountriesRelated);
-router.get("/singleSourceCriteriaRelated", sourcesController.singleSourceCriteriaRelated);
-router.get("/describeSource", sourcesController.describeSource);
-router.get("/insertSourceUtilizationCriteria", sourcesController.insertSourceUtilizationCriteria);
-
-
-//Criteria Routes
-router.get("/singleCriteriaInformation", criteriaController.singleCriteriaInformations);
-router.get("/singleCriteriaTerritoriesRelated", criteriaController.singleCriteriaTerritoriesRelated);
-router.get("/singleCriteriaSourcesRelated", criteriaController.singleCriteriaSourcesRelated);
-router.get("/singleCriteriaEcosystemsAndDevicesAndLawsRelated", criteriaController.singleCriteriaEcosystemsAndDevicesAndLawsRelated);
-router.get("/singleCriteriaPricesRelated", criteriaController.singleCriteriaPricesRelated);
-router.get("/singleCriteriaMeasuresRelated", criteriaController.singleCriteriaMeasuresRelated);
-
-
-
-//Company Routes
-router.get("/singleCompanyInformations", companyController.singleCompanyInformations);
+//
+router.get("/getSubjectList", subjectController.getSubjectList);
+router.get("/getGoalList", subjectController.getGoalList);
+router.get("/askGoalFromSubject", subjectController.askGoalFromSubject);
 
 module.exports = router;

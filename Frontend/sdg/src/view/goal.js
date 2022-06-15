@@ -25,24 +25,25 @@ function Indicatori(props) {
       .then(
         (response) => {
           setGoalData(response.result);
-          {response.result.map((item, index) => {
-              if (item.predicate.includes('sdg#has_image')) {
-                setImg(item.object)
-              }
-              if (item.predicate.includes('sdg#start_time')) {
-                setStart(item.object)
-              }
-              if (item.predicate.includes('sdg#end_time')) {
-                setEnd(item.object)
-              }
-              if (item.predicate.includes('rdf-schema#comment')) {
-                setComment(item.object)
-              }
-              if (item.predicate.includes('sdg#has_source')) {
-                setSource(item.object)
-              }
-            })
-          }
+          response.result.map((item, index) => {
+            if (item.predicate.includes('sdg#has_image')) {
+              setImg(item.object)
+            }
+            if (item.predicate.includes('sdg#start_time')) {
+              setStart(item.object)
+            }
+            if (item.predicate.includes('sdg#end_time')) {
+              setEnd(item.object)
+            }
+            if (item.predicate.includes('rdf-schema#comment')) {
+              setComment(item.object)
+            }
+            if (item.predicate.includes('sdg#has_source')) {
+              setSource(item.object)
+            }
+            return null;
+          })
+
         },
         (error) => {
           console.log("Backend error" + error);
@@ -73,7 +74,6 @@ function Indicatori(props) {
       .then(
         (response) => {
           setSubjectData(response.result);
-          console.log(response.result)
         },
         (error) => {
           console.log("Backend error" + error);
@@ -95,15 +95,14 @@ function Indicatori(props) {
     setExpanded(isExpanded ? panel : false);
   };
 
-  function routeChange(id,comment, path) {
-    navigate(path, { state: { id: id, comment: comment } });
+  function routeChange(id, path) {
+    navigate(path, { state: { id: id } });
   }
   function hyperLinkChange(path) {
     window.location.href = path;
     return null;
   }
   
-
   return (
     <>
       {state === null ? null :
@@ -175,7 +174,7 @@ function Indicatori(props) {
                     <Typography>
                       {item.comment}
                     </Typography>
-                    <Fab variant="extended" color="primary" aria-label="add" style={{ marginBottom: '15', alignSelf: 'flex-end' }} onClick={() => routeChange(item.label, comment, "/indicators")}>
+                    <Fab variant="extended" color="primary" aria-label="add" style={{ marginBottom: '15', alignSelf: 'flex-end' }} onClick={() => routeChange(item.label, "/indicators")}>
                       <ReadMoreIcon sx={{ mr: 1 }} />
                       Read more...
                     </Fab>

@@ -1,0 +1,78 @@
+[
+    {
+      "indicator": "Indicator 1.1.1",
+      "link": " \thttps://ourworldindata.org/grapher/share-of-population-in-extreme-poverty"
+    },
+    {
+      "indicator": "Indicator 1.2.1",
+      "link": " \thttps://ourworldindata.org/grapher/share-of-population-living-in-poverty-by-national-poverty-lines"
+    },
+    {
+      "indicator": "Indicator 1.2.2",
+      "link": "\thttps://ourworldindata.org/grapher/share-multi-poverty"
+    },
+    {
+      "indicator": "Indicator 1.3.1",
+      "link": "\thttps://ourworldindata.org/grapher/coverage-of-social-insurance-programs"
+    },
+    {
+      "indicator": "Indicator 1.4.1",
+      "link": "\thttps://ourworldindata.org/grapher/access-to-basic-resources"
+    },
+    {
+      "indicator": "Indicator 1.4.2",
+      "link": "\thttps://ourworldindata.org/grapher/legally-recognized-rights-to-land"
+    },
+    {
+      "indicator": "Indicator 1.5.1",
+      "link": " \thttps://ourworldindata.org/grapher/deaths-and-missing-persons-due-to-natural-disasters"
+    },
+    {
+      "indicator": "Indicator 1.5.1",
+      "link": "\thttps://ourworldindata.org/grapher/internally-displaced-persons-from-disasters"
+    },
+    {
+      "indicator": "Indicator 1.5.1",
+      "link": "\thttps://ourworldindata.org/grapher/number-of-people-directly-affected-by-natural-disasters"
+    },
+    {
+      "indicator": "Indicator 1.5.2",
+      "link": "\thttps://ourworldindata.org/grapher/direct-disaster-loss-as-a-share-of-gdp"
+    },
+    {
+      "indicator": "Indicator 1.5.2",
+      "link": "\thttps://ourworldindata.org/grapher/global-disaster-losses-gdp-share"
+    },
+    {
+      "indicator": "Indicator 1.5.2",
+      "link": "\thttps://ourworldindata.org/grapher/economic-losses-from-disasters-share-gdp"
+    },
+    {
+      "indicator": "Indicator 1.5.3",
+      "link": "\thttps://ourworldindata.org/grapher/legislative-provisions-for-managing-disaster-risk"
+    },
+    {
+      "indicator": "Indicator 1.5.4",
+      "link": "\thttps://ourworldindata.org/grapher/local-gov-disaster-strategies"
+    },
+    {
+      "indicator": "Indicator 1.a.1",
+      "link": "\thttps://ourworldindata.org/grapher/donated-official-development-assistance-grants-for-poverty-reduction"
+    },
+    {
+      "indicator": "Indicator 1.a.2",
+      "link": "\thttps://ourworldindata.org/grapher/received-official-development-assistance-grants-for-poverty-reduction"
+    },
+    {
+      "indicator": "Indicator 1.a.2\thttps://ourworldindata.org/grapher/health-expenditure-government-expenditure",
+      "link": ""
+    },
+    {
+      "indicator": "Indicator 1.a.2",
+      "link": "\thttps://ourworldindata.org/grapher/share-of-education-in-government-expenditure"
+    },
+    {
+      "indicator": "Indicator 1.b.1",
+      "link": "\tnull"
+    }
+   ]
