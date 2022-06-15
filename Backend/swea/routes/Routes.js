@@ -9,6 +9,7 @@ const territoryController = require("../controllers/Territory");
 const sourcesController = require("../controllers/Sources");
 const companyController = require("../controllers/Company");
 const correlatedConceptController = require("../controllers/corrConcept");
+const indicatorController = require("../controllers/indicatori");
 const criteriaController = require("../controllers/Criteria");
 
 router.get("/trytest", tryController.test);
@@ -23,6 +24,9 @@ router.get("/getSubjectInfo", goalController.getSubjectData);
 //concepts Routes
 router.get("/getCorConcept", correlatedConceptController.getCorrelatedConcept);
 router.get("/getMetaCorConceptLabel", correlatedConceptController.getCorrelatedConceptLabel);
+//indicators Routes
+router.get("/getIndicators", indicatorController.getIndicators);
+router.get("/getTiers", indicatorController.getTiers);
 //Territory Routes
 router.get("/allCountry", territoryController.allCountry);
 router.get("/singleCountryInformations", territoryController.singleCountryInf);

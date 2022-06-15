@@ -72,13 +72,12 @@ exports.getCorrelatedConceptLabel = async (req, res, next) => {
         ?Concept skos:prefLabel ?prefLabel.
   		FILTER(lang(?prefLabel)='en' && STR(?Concept)= "`+ req.query.res + `")
     }
-    `, {sources: ['https://research.un.org/en/thesaurus'],
+    `, {sources: ['http://localhost:3030/tes/sparql'],
     });
     bindingsStream.on('data', (binding) => {
         
         let item = {
-            'Concept':binding.get('Concept').value,
-            'related':binding.get('related').value
+            'Label':binding.get('prefLabel').value
         }
         response.push(item)
     });

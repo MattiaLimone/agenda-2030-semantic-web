@@ -95,8 +95,8 @@ function Indicatori(props) {
     setExpanded(isExpanded ? panel : false);
   };
 
-  function routeChange(id, path) {
-    navigate(path, { state: { id: id } });
+  function routeChange(id,comment, path) {
+    navigate(path, { state: { id: id, comment: comment } });
   }
   function hyperLinkChange(path) {
     window.location.href = path;
@@ -175,7 +175,7 @@ function Indicatori(props) {
                     <Typography>
                       {item.comment}
                     </Typography>
-                    <Fab variant="extended" color="primary" aria-label="add" style={{ marginBottom: '15', alignSelf: 'flex-end' }} onClick={() => routeChange(item.label, "/target")}>
+                    <Fab variant="extended" color="primary" aria-label="add" style={{ marginBottom: '15', alignSelf: 'flex-end' }} onClick={() => routeChange(item.label, comment, "/indicators")}>
                       <ReadMoreIcon sx={{ mr: 1 }} />
                       Read more...
                     </Fab>

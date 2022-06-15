@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { Grid, Fab, Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
+import { Grid, Fab, Accordion, AccordionSummary, AccordionDetails, Typography, Button } from '@mui/material';
 import ReadMoreIcon from '@mui/icons-material/ReadMore';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
@@ -28,12 +28,16 @@ function Indicatori(props) {
   }
 
   var getCorrelatedConceptLabel = () => {
-    for (let i = 0; i < subjectData.length; i++) {
-      fetch('http://localhost:8080/getMetaCorConceptLabel?res=' + subjectData[i].related)
+    //for (const element of subjectData) {
+    for(let i = 0; i < subjectData.length; i++) {
+      
+      fetch('http://localhost:8080/getMetaCorConceptLabel?res=' + subjectData.related)
       .then(res => res.json())
       .then(
         (response) => {
-          labelData[i].push(response.result);
+          
+          labelData[i]=response.result;
+          console.log("sono nella response" , labelData)
         },
         (error) => {
           console.log("Backend error" + error);
@@ -43,6 +47,7 @@ function Indicatori(props) {
         }
       )
     }
+    //}
   }
 
 
@@ -80,9 +85,8 @@ function Indicatori(props) {
               {labelData.map((item, index) => {
                       return (
                         <div key={index}>
-                          <Fab variant="extended" color="primary" aria-label="add" style={{ marginBottom: '15' }}>
-                            <ReadMoreIcon sx={{ mr: 1 }} />
-                            {item}
+                          <Fab variant="extended" color="inherit" aria-label="add" style={{ marginBottom: '15' }}>
+                            Label:{item.Label}
                           </Fab>
                           <div style={{ height: '10px' }} />
                         </div>
@@ -94,7 +98,7 @@ function Indicatori(props) {
                 {subjectData.map((item, index) => {
                       return (
                         <div key={index}>
-                          <Fab variant="extended" color="primary" aria-label="add" style={{ marginBottom: '15' }} onClick={() => hyperLinkChange(item.object)}>
+                          <Fab variant="extended" color="primary" aria-label="add" style={{ marginBottom: '15' }}>
                             <ReadMoreIcon sx={{ mr: 1 }} />
                             {item.related}
                           </Fab>
