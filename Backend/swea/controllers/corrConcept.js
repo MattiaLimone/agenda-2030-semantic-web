@@ -29,20 +29,22 @@ exports.getCorrelatedConcept = async (req, res, next) => {
 	PREFIX dcterms: <http://purl.org/dc/terms/>
 
     
-    SELECT ?Concept ?prefLabel ?related
+    SELECT ?Concept ?prefLabel ?related ?relatedLabel
     WHERE {
         ?Concept a skos:Concept.
         ?Concept skos:prefLabel ?prefLabel.
   		?Concept skos:related ?related.
-  		FILTER(lang(?prefLabel)='en' && STR(?prefLabel) = "`+ req.query.res + `")
+        ?related skos:prefLabel ?relatedLabel
+  		FILTER(lang(?prefLabel)='en' && lang(?relatedLabel)='en' && STR(?prefLabel) = "`+ req.query.res + `")
     }
-    `, {sources: ['http://localhost:3000/sparql'],
+    `, {sources: ['http://localhost:3030/unbis/sparql'],
     });
     bindingsStream.on('data', (binding) => {
         
         let item = {
             'Concept':binding.get('Concept').value,
-            'related':binding.get('related').value
+            'related':binding.get('related').value,
+            'relatedLabel':binding.get('relatedLabel').value
         }
         response.push(item)
     });
@@ -77,7 +79,8 @@ exports.getCorrelatedConceptLabel = async (req, res, next) => {
     bindingsStream.on('data', (binding) => {
         
         let item = {
-            'Label':binding.get('prefLabel').value
+            'Label':binding.get('prefLabel').value,
+            'uri':binding.get('Concept').value
         }
         response.push(item)
     });

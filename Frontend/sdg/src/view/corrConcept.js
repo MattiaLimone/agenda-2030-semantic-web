@@ -8,9 +8,7 @@ function Indicatori(props) {
   let navigate = useNavigate()
   const { state } = useLocation();
   const [subjectData, setSubjectData] = useState(new Array());
-  const [expanded, setExpanded] = useState(false);
-  const [labelData, setlabelData] = useState(new Array());
-
+  const [changePage, setChangePage] = useState()
   var getCorrelatedConcept = () => {
     fetch('http://localhost:8080/getCorConcept?res=' + state.id)
       .then(res => res.json())
@@ -27,47 +25,18 @@ function Indicatori(props) {
       )
   }
 
-  var getCorrelatedConceptLabel = () => {
-    //for (const element of subjectData) {
-    for(let i = 0; i < subjectData.length; i++) {
-      
-      fetch('http://localhost:8080/getMetaCorConceptLabel?res=' + subjectData.related)
-      .then(res => res.json())
-      .then(
-        (response) => {
-          
-          labelData[i]=response.result;
-          console.log("sono nella response" , labelData)
-        },
-        (error) => {
-          console.log("Backend error" + error);
-          setlabelData({
-            data: []
-          })
-        }
-      )
-    }
-    //}
-  }
-
-
-  
   useEffect(() => {
     if (state === null) {
       navigate("/");
     }
     getCorrelatedConcept();
-    getCorrelatedConceptLabel();
-  }, []);
+    setChangePage(Math.random())
+  }, [state]);
 
-  const handleChange = (panel) => (event, isExpanded) => {
-    
-    setExpanded(isExpanded ? panel : false);
-  };
-
-  function routeChange(path) {
-    navigate("/target", { state: { id: path } });
+  function routeChange(id, path) {
+    navigate(path, { state: { id: id } });
   }
+
   function hyperLinkChange(path) {
     window.location.href = path;
     return null;
@@ -81,31 +50,14 @@ function Indicatori(props) {
             <h1>{state.id}</h1>
             <div style={{ flexDirection: 'row', display: 'flex' }}>
               <h2 style={{ width: '25%' }}>Correlated Concepts:</h2>
-              <div style={{ width: '85%', marginTop: '25px' }}>
-              {labelData.map((item, index) => {
-                      return (
-                        <div key={index}>
-                          <Fab variant="extended" color="inherit" aria-label="add" style={{ marginBottom: '15' }}>
-                            Label:{item.Label}
-                          </Fab>
-                          <div style={{ height: '10px' }} />
-                        </div>
-                      )
-                    
-                })}
-              </div>
-              <div style={{ width: '85%', marginTop: '25px' }}>   
+              <div style={{ width: '75%', marginTop: '25px' }}>   
                 {subjectData.map((item, index) => {
                       return (
                         <div key={index}>
-                          <Fab variant="extended" color="primary" aria-label="add" style={{ marginBottom: '15' }}>
-                            <ReadMoreIcon sx={{ mr: 1 }} />
-                            {item.related}
-                          </Fab>
-                          <div style={{ height: '10px' }} />
-                        </div>
+                            <Button onClick={() => routeChange(item.relatedLabel,"/corrConcept")} variant="outlined"
+                            style={{margin: 5}}>{item.relatedLabel}</Button>
+                          </div>
                       )
-                    
                 })}
               </div>
             </div>

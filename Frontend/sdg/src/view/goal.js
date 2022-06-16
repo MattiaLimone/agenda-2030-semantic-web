@@ -125,7 +125,6 @@ function Indicatori(props) {
                 <Typography style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: 15 }}>
                   <Button onClick={() => hyperLinkChange(source)} variant="outlined">SOURCE</Button>
                 </Typography>
-
               </Grid>
               <div style={{ flexDirection: 'row', display: 'flex' }}>
                 <div>
