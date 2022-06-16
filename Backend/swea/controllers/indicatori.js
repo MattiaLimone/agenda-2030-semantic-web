@@ -106,3 +106,100 @@ ORDER BY ASC(?TierLabel)
     });
 
 }
+
+exports.getAllIndicators = async (req, res, next) => {
+    
+    const response = [];
+
+    if (req.query.CurrentTarget != null) {
+        const bindingsStream = await myEngine.queryBindings(`
+    PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+    PREFIX sdg: <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg#> 
+
+        SELECT ?IndicatorLabel ?IndicatorComment ?TierLabel ?IndicatorSource
+        WHERE {
+            ?Goal a sdg:Obiettivo.
+            ?Goal rdfs:label ?GoalLabel.
+            ?Indicator a sdg:Indicatore.
+            ?Target a sdg:Target.
+            ?Indicator rdfs:label ?IndicatorLabel.
+            ?Target rdfs:label ?TargetLabel.
+            ?Indicator rdfs:comment ?IndicatorComment.
+            ?Indicator sdg:has_source ?IndicatorSource.
+            ?Tier a sdg:Livello_Indicatore.
+            ?Tier rdfs:label ?TierLabel.
+            ?Indicator sdg:has_classification ?Tier.
+            ?Goal sdg:has_target ?Target.
+            ?Target sdg:has_indicator ?Indicator.
+            FILTER(STR(?TargetLabel)= "`+ req.query.CurrentTarget + `")
+        }
+    ORDER BY ASC(?IndicatorLabel)
+    `, {sources: ['http://localhost:3000/sparql'],
+    });
+    bindingsStream.on('data', (binding) => {
+        
+        let item = {
+            'indicator':binding.get('IndicatorLabel').value,
+            'comment':binding.get('IndicatorComment').value,
+            'tier':binding.get('TierLabel').value,
+            'source':binding.get('IndicatorSource').value
+        }
+        response.push(item)
+    });
+    bindingsStream.on('end', () => {
+        
+        return res.json({ result: response });
+    });
+    bindingsStream.on('error', (error) => {
+        console.error(error);
+    });
+    } else {
+        const bindingsStream = await myEngine.queryBindings(`
+    PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+    PREFIX sdg: <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg#> 
+
+        SELECT ?IndicatorLabel ?IndicatorComment ?TargetLabel ?TierLabel ?IndicatorSource
+        WHERE {
+            ?Goal a sdg:Obiettivo.
+            ?Goal rdfs:label ?GoalLabel.
+            ?Indicator a sdg:Indicatore.
+            ?Target a sdg:Target.
+            ?Indicator rdfs:label ?IndicatorLabel.
+            ?Target rdfs:label ?TargetLabel.
+            ?Indicator rdfs:comment ?IndicatorComment.
+            ?Indicator sdg:has_source ?IndicatorSource.
+            ?Tier a sdg:Livello_Indicatore.
+            ?Tier rdfs:label ?TierLabel.
+            ?Indicator sdg:has_classification ?Tier.
+            ?Goal sdg:has_target ?Target.
+            ?Target sdg:has_indicator ?Indicator.
+        }
+    ORDER BY ASC(?IndicatorLabel)
+    `, {sources: ['http://localhost:3000/sparql'],
+    });
+    bindingsStream.on('data', (binding) => {
+        
+        let item = {
+            'indicator':binding.get('IndicatorLabel').value,
+            'comment':binding.get('IndicatorComment').value,
+            'target':binding.get('TargetLabel').value,
+            'tier':binding.get('TierLabel').value,
+            'source':binding.get('IndicatorSource').value
+        }
+        response.push(item)
+    });
+    bindingsStream.on('end', () => {
+        
+        return res.json({ result: response });
+    });
+    bindingsStream.on('error', (error) => {
+        console.error(error);
+    });
+    } 
+}

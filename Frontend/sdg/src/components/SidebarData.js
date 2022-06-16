@@ -4,14 +4,20 @@ import * as IoIcons from "react-icons/io";
 
 export const SidebarData = [
     {
-        title: 'Agenda 2030', 
-        path: '/agenda',
-        icon: <IoIcons.IoMdGlobe/>,
+        title: 'Obiettivi', 
+        path: '/',
+        icon: <IoIcons.IoMdRibbon/>,
         cName: 'nav-text'
     },
     {
-        title: 'Obiettivi', 
-        path: '/',
+        title: 'Target', 
+        path: '/target',
+        icon: <IoIcons.IoMdRibbon/>,
+        cName: 'nav-text'
+    },
+    {
+        title: 'Indicatori', 
+        path: '/allIndicators',
         icon: <IoIcons.IoMdRibbon/>,
         cName: 'nav-text'
     },
@@ -20,12 +26,6 @@ export const SidebarData = [
         path: '/search',
         icon: <AiIcons.AiOutlineSearch/>,
         cName: 'nav-text'
-    },
-    {
-        title: 'Avanzamento', 
-        path: '/avanzamento',
-        icon: <IoIcons.IoMdAnalytics/>,
-        cName: 'nav-text'
-    },
+    }
 
 ]
