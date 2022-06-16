@@ -35,7 +35,6 @@ exports.getSubjectList = async (req, res, next) => {
     bindingsStream.on('data', (binding) => {
         let item = {
             "label": binding.get('prefLabel').value,
-            
         }
         response.push(item)
     });
@@ -84,16 +83,29 @@ exports.askGoalFromSubject = async (req, res, next) => {
     const response = [];
 
     const bindingsStream = await myEngine.queryBoolean(`
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
     PREFIX unbist: <http://metadata.un.org/thesaurus/> 
-    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
     PREFIX sdg: <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg#>
 
-    ASK {
-        ?gaol a sdg:Obiettivo.
+    ASK
+    WHERE {
+    ?goal a sdg:Obiettivo.
+    ?goal rdfs:label "`+ req.query.goal + `"@it.
+    OPTIONAL {
         ?goal sdg:has_subject ?subject.
-        ?subject skos:prefLabel "ABACA"@en.
-      }
+        ?subject skos:prefLabel "`+ req.query.subject + `"@en.
+    }
+    OPTIONAL {
+        ?goal sdg:has_subject ?subject.
+        ?subject skos:related ?related.
+        ?related skos:prefLabel "`+ req.query.subject + `"@en.
+    }
+    FILTER(STR(?subject) != '')
+    }
     `, {
         sources: ['http://localhost:3000/sparql'],
     });
