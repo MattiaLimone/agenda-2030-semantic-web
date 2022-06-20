@@ -1,17 +1,12 @@
 const express = require("express");
 const router = express.Router();
 
-const tryController = require("../controllers/try");
-
 const homeController = require("../controllers/home");
 const goalController = require("../controllers/goal")
 const correlatedConceptController = require("../controllers/corrConcept");
 const indicatorController = require("../controllers/indicatori");
 const subjectController = require("../controllers/subject");
 const tagetController = require("../controllers/target");
-
-router.get("/trytest", tryController.test);
-router.get("/localTest", tryController.localOntology);
 
 //home Routes
 router.get("/homepage", homeController.getData);

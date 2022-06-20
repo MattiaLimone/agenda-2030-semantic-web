@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
-import { Grid, Fab, Accordion, AccordionSummary, AccordionDetails, Autocomplete, Typography, Box, TextField, Button } from '@mui/material';
+import { Grid, Fab, Accordion, AccordionSummary, AccordionDetails, Autocomplete, Typography, TextField, Button } from '@mui/material';
 import ReadMoreIcon from '@mui/icons-material/ReadMore';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import chart from '../utils/chart.json';
+import chart from '../utils/chart.json'
 
 function Indicatori(props) {
-  let navigate = useNavigate()
-  const [chartList, setChartList] = useState(new Array());
-  const [indicatorsData, setIndicatorsData] = useState(new Array());
+  const [chartList, setChartList] = useState([]);
+  const [indicatorsData, setIndicatorsData] = useState([]);
   const [expanded, setExpanded] = useState(false);
-  const [TargetList, setTargetList] = useState(new Array());
+  const [TargetList, setTargetList] = useState([]);
   const [CurrentTarget, setCurrentTarget] = useState(null)
   const [loading, setLoading] = useState(false);
   const [answer, setAnswer] = useState(null)
@@ -72,6 +70,7 @@ function Indicatori(props) {
   useEffect(() => {
     getTargetList()
     getAllIndicators()
+    setChartList(chart)
   }, []);
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
@@ -92,9 +91,6 @@ function Indicatori(props) {
     setCurrentTarget(target)
   }
 
-  function routeChange(id, path) {
-    navigate(path, { state: { id: id } });
-  }
   function hyperLinkChange(path) {
     window.location.href = path;
     return null;
@@ -158,13 +154,7 @@ function Indicatori(props) {
                     <Typography>
                       Target:{item.target}
                     </Typography>
-                    {chartList.map((i, x) => {
-                      if (item.label.localeCompare(i.indicator) == 0) {
-                        return (
-                          <iframe key={x} title={Math.random()} src={i.link} loading="lazy" style={{ width: '100%', height: '600px' }}></iframe>
-                        )
-                      }
-                    })}
+                    
                     <Fab variant="extended" color="inherit" size="small" aria-label="add" style={{ marginTop: 15, marginBottom: 15, alignSelf: 'flex-end' }}>
                       LEVEL:{item.tier}
                     </Fab>
@@ -179,7 +169,7 @@ function Indicatori(props) {
 
               </div>
               :
-              <h1></h1>
+              <></>
           }
             <div style={{ height: '100px' }} />
           </Grid>

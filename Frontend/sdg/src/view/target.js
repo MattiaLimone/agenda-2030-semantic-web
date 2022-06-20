@@ -1,21 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
-import { Grid, Fab, Accordion, AccordionSummary, AccordionDetails, Autocomplete, Typography, Box, TextField, Button } from '@mui/material';
-import ReadMoreIcon from '@mui/icons-material/ReadMore';
+import { Grid, Accordion, AccordionSummary, AccordionDetails, Autocomplete, Typography, TextField, Button } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import chart from '../utils/chart.json';
 
 function Target(props) {
-  let navigate = useNavigate()
-  const [chartList, setChartList] = useState(new Array());
-  const [targetData, setTargetData] = useState(new Array());
   const [expanded, setExpanded] = useState(false);
-  const [goalList, setGoalList] = useState(new Array());
+  const [targetData, setTargetData] = useState([]);
+  const [goalList, setGoalList] = useState([]);
   const [currentGoal, setCurrentGoal] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [answer, setAnswer] = useState(null)
-
-  var getTargetList = () => {
+  const [answer, setAnswer] = useState(null) 
+  const getTargetList = () => {
     if (currentGoal != null) {
       fetch('http://localhost:8080/getTargetList?currentGoal=' + currentGoal)
       .then(res => res.json())
@@ -49,10 +43,9 @@ function Target(props) {
         }
       )
     }
-    
   }
-
-  var getGoalList = () => {
+  
+  const getGoalList = () => {
     fetch('http://localhost:8080/getGoalList')
       .then(res => res.json())
       .then(
@@ -71,9 +64,11 @@ function Target(props) {
 
   useEffect(() => {
     getTargetList()
+
     getGoalList()
 
   }, []);
+
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
@@ -92,15 +87,6 @@ function Target(props) {
     console.log(goal)
     setCurrentGoal(goal)
   }
-
-  function routeChange(id, path) {
-    navigate(path, { state: { id: id } });
-  }
-  function hyperLinkChange(path) {
-    window.location.href = path;
-    return null;
-  }
-
 
   return (
     <>
@@ -160,7 +146,7 @@ function Target(props) {
               })}
             </div>
             :
-            <h1></h1>
+            <></>
           }
             <div style={{ height: '100px' }} />
           </Grid>
