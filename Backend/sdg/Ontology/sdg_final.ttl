@@ -120,6 +120,12 @@
 #    Object Properties
 #################################################################
 
+###  http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg#has_agency
+:has_agency rdf:type owl:ObjectProperty ;
+            rdfs:domain :Indicatore ;
+            rdfs:range <http://dbpedia.org/ontology/Organisation> .
+
+
 ###  http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg#has_author
 :has_author rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf owl:topObjectProperty ;
@@ -196,12 +202,6 @@
                                  ] ;
               rdfs:domain :Target ;
               rdfs:range :Obiettivo .
-
-
-###  http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency
-<http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> rdf:type owl:ObjectProperty ;
-                                                                     rdfs:domain :Indicatore ;
-                                                                     rdfs:range <http://dbpedia.org/ontology/Organisation> .
 
 
 ###  http://www.w3.org/2002/07/owl#topObjectProperty
@@ -3876,9 +3876,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :World_Bank ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_1.1 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :World_Bank ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_1.1 ;
                  :has_code "C010101" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-01-01-01a.pdf"^^xsd:anyURI ;
@@ -3891,9 +3891,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :World_Bank ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_1.2 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :World_Bank ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_1.2 ;
                  :has_code "C010201" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-01-02-01.pdf"^^xsd:anyURI ;
@@ -3906,9 +3906,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg#National_Gov.> ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_1.2 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg#National_Gov.> ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_1.2 ;
                  :has_code "C010202" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-01-02-02.pdf"^^xsd:anyURI ;
@@ -3921,9 +3921,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :ILO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_1.3 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :ILO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_1.3 ;
                  :has_code "C010301" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-01-03-01a.pdf"^^xsd:anyURI ;
@@ -3936,9 +3936,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UN-Habitat ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_1.4 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UN-Habitat ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_1.4 ;
                  :has_code "C010401" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-01-04-01.pdf"^^xsd:anyURI ;
@@ -3951,10 +3951,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UN-Habitat ,
+                             :World_Bank ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_1.4 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UN-Habitat ,
-                                                                                      :World_Bank ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_1.4 ;
                  :has_code "C010402" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-01-04-02.pdf"^^xsd:anyURI ;
@@ -3967,9 +3967,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNDRR ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_1.5 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNDRR ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_1.5 ;
                  :has_code "C200303" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-01-05-01.pdf"^^xsd:anyURI ;
@@ -3982,9 +3982,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNDRR ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_1.5 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNDRR ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_1.5 ;
                  :has_code "C200211" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-01-05-02.pdf"^^xsd:anyURI ;
@@ -3997,9 +3997,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNDRR ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_1.5 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNDRR ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_1.5 ;
                  :has_code "C200304" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-01-05-03.pdf"^^xsd:anyURI ;
@@ -4012,9 +4012,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNDRR ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_1.5 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNDRR ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_1.5 ;
                  :has_code "C200305" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-01-05-04.pdf"^^xsd:anyURI ;
@@ -4027,9 +4027,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :OECD ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_1.a ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :OECD ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_1.a ;
                  :has_code "C010a04" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-01-0a-01.pdf"^^xsd:anyURI ;
@@ -4042,11 +4042,11 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :ILO ,
+                             :UNESCO-UIS ,
+                             :WHO ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_1.a ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :ILO ,
-                                                                                      :UNESCO-UIS ,
-                                                                                      :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_1.a ;
                  :has_code "C010a02" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-01-0a-02.pdf"^^xsd:anyURI ;
@@ -4059,9 +4059,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNICEF ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_1.b ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNICEF ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_1.b ;
                  :has_code "C010b02" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-01-0b-01.pdf"^^xsd:anyURI ;
@@ -4074,9 +4074,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :World_Bank ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_10.1 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :World_Bank ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_10.1 ;
                   :has_code "C100101" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-10-01-01.pdf"^^xsd:anyURI ;
@@ -4089,9 +4089,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :World_Bank ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_10.2 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :World_Bank ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_10.2 ;
                   :has_code "C100201" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-10-02-01.pdf"^^xsd:anyURI ;
@@ -4104,9 +4104,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :OHCHR ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_10.3 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :OHCHR ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_10.3 ;
                   :has_code "C200204" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-10-03-01.pdf"^^xsd:anyURI ;
@@ -4119,9 +4119,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :ILO ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_10.4 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :ILO ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_10.4 ;
                   :has_code "C100401" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-10-04-01.pdf"^^xsd:anyURI ;
@@ -4134,8 +4134,8 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :World_Bank ;
                   :has_classification :Livello_2 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :World_Bank ;
                   :has_code "C100402" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-10-04-02.pdf"^^xsd:anyURI ;
                   rdfs:comment "Redistributive impact of fiscal policy4"@en ;
@@ -4147,9 +4147,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :IMF ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_10.5 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :IMF ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_10.5 ;
                   :has_code "C100501" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-10-05-01.pdf"^^xsd:anyURI ;
@@ -4162,9 +4162,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg#DESA/FFDO> ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_10.6 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg#DESA/FFDO> ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_10.6 ;
                   :has_code "C200205" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-10-06-01.pdf"^^xsd:anyURI ;
@@ -4177,10 +4177,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :ILO ,
+                              :World_Bank ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_10.7 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :ILO ,
-                                                                                       :World_Bank ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_10.7 ;
                   :has_code "C100701" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-10-07-01.pdf"^^xsd:anyURI ;
@@ -4193,10 +4193,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :DESA_Population__Division ,
+                              :IOM ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_10.7 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :DESA_Population__Division ,
-                                                                                       :IOM ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_10.7 ;
                   :has_code "C100702" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-10-07-02.pdf"^^xsd:anyURI ;
@@ -4209,8 +4209,8 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :IOM ;
                   :has_classification :Livello_1 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :IOM ;
                   :has_code "C100703" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-10-07-03.pdf"^^xsd:anyURI ;
                   rdfs:comment "Number of people who died or disappeared in the process of migration towards an international destination"@en ;
@@ -4222,8 +4222,8 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNHCR ;
                   :has_classification :Livello_1 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNHCR ;
                   :has_code "C100704" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-10-07-04.pdf"^^xsd:anyURI ;
                   rdfs:comment "Proportion of the population who are refugees, by country of origin"@en ;
@@ -4235,11 +4235,11 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :ITU ,
+                              :UNCTAD ,
+                              :WTO ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_10.a ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :ITU ,
-                                                                                       :UNCTAD ,
-                                                                                       :WTO ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_10.a ;
                   :has_code "C100a01" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-10-0A-01.pdf"^^xsd:anyURI ;
@@ -4252,9 +4252,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :OECD ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_10.b ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :OECD ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_10.b ;
                   :has_code "C100b01" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-10-0B-01.pdf"^^xsd:anyURI ;
@@ -4267,9 +4267,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :World_Bank ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_10.c ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :World_Bank ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_10.c ;
                   :has_code "C100c01" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-10-0C-01.pdf"^^xsd:anyURI ;
@@ -4282,9 +4282,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UN-Habitat ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_11.1 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UN-Habitat ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_11.1 ;
                   :has_code "C110101" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-11-01-01.pdf"^^xsd:anyURI ;
@@ -4297,9 +4297,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UN-Habitat ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_11.2 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UN-Habitat ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_11.2 ;
                   :has_code "C110201" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-11-02-01.pdf"^^xsd:anyURI ;
@@ -4312,9 +4312,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UN-Habitat ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_11.3 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UN-Habitat ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_11.3 ;
                   :has_code "C110301" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-11-03-01.pdf"^^xsd:anyURI ;
@@ -4327,9 +4327,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UN-Habitat ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_11.3 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UN-Habitat ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_11.3 ;
                   :has_code "C110302" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-11-03-02.pdf"^^xsd:anyURI ;
@@ -4342,9 +4342,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNESCO-UIS ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_11.4 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNESCO-UIS ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_11.4 ;
                   :has_code "C110401" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-11-04-01.pdf"^^xsd:anyURI ;
@@ -4357,9 +4357,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNDRR ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_11.5 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNDRR ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_11.5 ;
                   :has_code "C200303" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-11-05-01.pdf"^^xsd:anyURI ;
@@ -4372,9 +4372,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNDRR ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_11.5 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNDRR ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_11.5 ;
                   :has_code "C200211" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-11-05-02.pdf"^^xsd:anyURI ;
@@ -4387,9 +4387,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNDRR ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_11.5 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNDRR ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_11.5 ;
                   :has_code "C110503" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-11-05-03.pdf"^^xsd:anyURI ;
@@ -4402,10 +4402,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UN-Habitat ,
+                              :UNSD ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_11.6 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UN-Habitat ,
-                                                                                       :UNSD ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_11.6 ;
                   :has_code "C110603" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-11-06-01.pdf"^^xsd:anyURI ;
@@ -4418,8 +4418,8 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :WHO ;
                   :has_classification :Livello_1 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :WHO ;
                   :has_code "C110602" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-11-06-02.pdf"^^xsd:anyURI ;
                   rdfs:comment "Annual mean levels of fine particulate matter (e.g. PM2.5 and PM10) in cities (population weighted)"@en ;
@@ -4431,9 +4431,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UN-Habitat ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_11.7 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UN-Habitat ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_11.7 ;
                   :has_code "C110701" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-11-07-01.pdf"^^xsd:anyURI ;
@@ -4446,9 +4446,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNODC ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_11.7 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNODC ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_11.7 ;
                   :has_code "C110702" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-11-07-02.pdf"^^xsd:anyURI ;
@@ -4461,9 +4461,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UN-Habitat ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_11.a ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UN-Habitat ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_11.a ;
                   :has_code "C110a02" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-11-0a-01.pdf"^^xsd:anyURI ;
@@ -4476,9 +4476,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNDRR ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_11.b ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNDRR ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_11.b ;
                   :has_code "C200304" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-11-0b-01.pdf"^^xsd:anyURI ;
@@ -4491,9 +4491,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNDRR ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_11.b ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNDRR ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_11.b ;
                   :has_code "C200305" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-11-0b-02.pdf"^^xsd:anyURI ;
@@ -4506,9 +4506,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNDRR ;
                   :has_classification :Livello_3 ;
                   :is_indicator_of :Target_11.c ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNDRR ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_11.c ;
                   :has_code "C110c01" ;
                   :has_source "http://metadata.un.org/sdg/C110c01?lang=en"^^xsd:anyURI ;
@@ -4521,9 +4521,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNEP ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_12.1 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNEP ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_12.1 ;
                   :has_code "C120101" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-12-01-01.pdf"^^xsd:anyURI ;
@@ -4536,9 +4536,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNEP ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_12.2 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNEP ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_12.2 ;
                   :has_code "C200202" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-12-02-01.pdf"^^xsd:anyURI ;
@@ -4551,9 +4551,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNEP ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_12.2 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNEP ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_12.2 ;
                   :has_code "C200203" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-12-02-02.pdf"^^xsd:anyURI ;
@@ -4566,10 +4566,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :FAO ,
+                              :UNEP ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_12.3 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :FAO ,
-                                                                                       :UNEP ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_12.3 ;
                   :has_code "C120301" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-12-03-01A.pdf"^^xsd:anyURI ;
@@ -4582,9 +4582,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNEP ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_12.4 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNEP ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_12.4 ;
                   :has_code "C120401" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-12-04-01.pdf"^^xsd:anyURI ;
@@ -4597,10 +4597,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNEP ,
+                              :UNSD ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_12.4 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNEP ,
-                                                                                       :UNSD ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_12.4 ;
                   :has_code "C120402" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-12-04-02.pdf"^^xsd:anyURI ;
@@ -4613,10 +4613,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNEP ,
+                              :UNSD ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_12.5 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNEP ,
-                                                                                       :UNSD ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_12.5 ;
                   :has_code "C120501" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-12-05-01.pdf"^^xsd:anyURI ;
@@ -4629,10 +4629,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNCTAD ,
+                              :UNEP ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_12.6 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNCTAD ,
-                                                                                       :UNEP ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_12.6 ;
                   :has_code "C120601" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-12-06-01.pdf"^^xsd:anyURI ;
@@ -4645,9 +4645,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNEP ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_12.7 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNEP ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_12.7 ;
                   :has_code "C120701" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-12-07-01.pdf"^^xsd:anyURI ;
@@ -4660,9 +4660,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNESCO-UIS ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_12.8 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNESCO-UIS ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_12.8 ;
                   :has_code "C200306" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-12-08-01.pdf"^^xsd:anyURI ;
@@ -4675,9 +4675,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :IRENA ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_12.a ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :IRENA ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_12.a ;
                   :has_code "C200208" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-12-0a-01.pdf"^^xsd:anyURI ;
@@ -4690,9 +4690,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNWTO ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_12.b ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNWTO ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_12.b ;
                   :has_code "C120b02" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-12-0b-01.pdf"^^xsd:anyURI ;
@@ -4705,9 +4705,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNEP ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_12.c ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNEP ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_12.c ;
                   :has_code "C120c01" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-12-0c-01.pdf"^^xsd:anyURI ;
@@ -4720,9 +4720,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNDRR ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_13.1 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNDRR ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_13.1 ;
                   :has_code "C200303" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-13-01-01.pdf"^^xsd:anyURI ;
@@ -4735,9 +4735,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNDRR ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_13.1 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNDRR ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_13.1 ;
                   :has_code "C200304" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-13-01-02.pdf"^^xsd:anyURI ;
@@ -4750,9 +4750,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNDRR ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_13.1 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNDRR ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_13.1 ;
                   :has_code "C200305" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-13-01-03.pdf"^^xsd:anyURI ;
@@ -4765,9 +4765,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNFCCC ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_13.2 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNFCCC ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_13.2 ;
                   :has_code "C130203" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-13-02-01.pdf"^^xsd:anyURI ;
@@ -4780,9 +4780,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNFCCC ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_13.2 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNFCCC ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_13.2 ;
                   :has_code "C130202" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-13-02-02.pdf"^^xsd:anyURI ;
@@ -4795,9 +4795,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNESCO-UIS ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_13.3 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNESCO-UIS ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_13.3 ;
                   :has_code "C200306" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-13-03-01.pdf"^^xsd:anyURI ;
@@ -4810,9 +4810,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNFCCC ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_13.a ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNFCCC ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_13.a ;
                   :has_code "C130a02" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-13-0a-01.pdf"^^xsd:anyURI ;
@@ -4825,9 +4825,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNFCCC ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_13.b ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNFCCC ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_13.b ;
                   :has_code "C130b02" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-13-0b-01.pdf"^^xsd:anyURI ;
@@ -4840,9 +4840,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :FAO ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_14.1 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :FAO ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_14.1 ;
                   :has_code "C140101" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-14-01-01.pdf"^^xsd:anyURI ;
@@ -4855,9 +4855,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNEP ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_14.2 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNEP ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_14.2 ;
                   :has_code "C140201" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-14-02-01.pdf"^^xsd:anyURI ;
@@ -4870,9 +4870,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNESCO-IHP ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_14.3 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNESCO-IHP ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_14.3 ;
                   :has_code "C140301" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-14-03-01.pdf"^^xsd:anyURI ;
@@ -4885,9 +4885,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :FAO ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_14.4 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :FAO ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_14.4 ;
                   :has_code "C140401" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-14-04-01.pdf"^^xsd:anyURI ;
@@ -4900,10 +4900,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNEP ,
+                              :UNEP-WCMC ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_14.5 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNEP ,
-                                                                                       :UNEP-WCMC ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_14.5 ;
                   :has_code "C140501" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-14-05-01.pdf"^^xsd:anyURI ;
@@ -4916,9 +4916,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :FAO ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_14.6 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :FAO ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_14.6 ;
                   :has_code "C140601" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-14-06-01.pdf"^^xsd:anyURI ;
@@ -4931,10 +4931,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :FAO ,
+                              :UNEP-WCMC ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_14.7 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :FAO ,
-                                                                                       :UNEP-WCMC ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_14.7 ;
                   :has_code "C140701" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-14-07-01.pdf"^^xsd:anyURI ;
@@ -4947,9 +4947,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNESCO-IHP ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_14.a ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNESCO-IHP ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_14.a ;
                   :has_code "C140a01" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-14-0a-01.pdf"^^xsd:anyURI ;
@@ -4962,9 +4962,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :FAO ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_14.b ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :FAO ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_14.b ;
                   :has_code "C140b01" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-14-0b-01.pdf"^^xsd:anyURI ;
@@ -4977,9 +4977,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UN-Habitat ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_14.c ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UN-Habitat ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_14.c ;
                   :has_code "C140c01" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-14-0c-01.pdf"^^xsd:anyURI ;
@@ -4992,9 +4992,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :FAO ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_15.1 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :FAO ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_15.1 ;
                   :has_code "C150101" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-15-01-01.pdf"^^xsd:anyURI ;
@@ -5007,10 +5007,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNEP ,
+                              :UNEP-WCMC ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_15.1 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNEP ,
-                                                                                       :UNEP-WCMC ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_15.1 ;
                   :has_code "C150102" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-15-01-02.pdf"^^xsd:anyURI ;
@@ -5023,9 +5023,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :FAO ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_15.2 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :FAO ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_15.2 ;
                   :has_code "C150201" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-15-02-01.pdf"^^xsd:anyURI ;
@@ -5038,9 +5038,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNCTAD ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_15.3 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNCTAD ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_15.3 ;
                   :has_code "C150301" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-15-03-01.pdf"^^xsd:anyURI ;
@@ -5053,10 +5053,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNEP ,
+                              :UNEP-WCMC ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_15.4 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNEP ,
-                                                                                       :UNEP-WCMC ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_15.4 ;
                   :has_code "C150401" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-15-04-01.pdf"^^xsd:anyURI ;
@@ -5069,9 +5069,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :FAO ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_15.4 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :FAO ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_15.4 ;
                   :has_code "C150402" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-15-04-02.pdf"^^xsd:anyURI ;
@@ -5084,9 +5084,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :IUCN ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_15.5 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :IUCN ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_15.5 ;
                   :has_code "C150501" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-15-05-01.pdf"^^xsd:anyURI ;
@@ -5099,9 +5099,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :CBD-Secretariat ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_15.6 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :CBD-Secretariat ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_15.6 ;
                   :has_code "C150601" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-15-06-01.pdf"^^xsd:anyURI ;
@@ -5114,10 +5114,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :CITES ,
+                              :UNODC ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_15.7 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :CITES ,
-                                                                                       :UNODC ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_15.7 ;
                   :has_code "C200206" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-15-07-01.pdf"^^xsd:anyURI ;
@@ -5130,9 +5130,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :IUCN ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_15.8 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :IUCN ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_15.8 ;
                   :has_code "C150801" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-15-08-01.pdf"^^xsd:anyURI ;
@@ -5145,10 +5145,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :CBD-Secretariat ,
+                              :UNEP ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_15.9 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :CBD-Secretariat ,
-                                                                                       :UNEP ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_15.9 ;
                   :has_code "C150902" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-15-09-01.pdf"^^xsd:anyURI ;
@@ -5161,11 +5161,11 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :OECD ,
+                              :UNEP ,
+                              :World_Bank ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_15.a ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :OECD ,
-                                                                                       :UNEP ,
-                                                                                       :World_Bank ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_15.a ;
                   :has_code "C200210" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-15-0a-01.pdf"^^xsd:anyURI ;
@@ -5178,11 +5178,11 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :OECD ,
+                              :UNEP ,
+                              :World_Bank ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_15.b ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :OECD ,
-                                                                                       :UNEP ,
-                                                                                       :World_Bank ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_15.b ;
                   :has_code "C200210" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-15-0b-01.pdf"^^xsd:anyURI ;
@@ -5195,10 +5195,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :CITES ,
+                              :UNODC ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_15.c ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :CITES ,
-                                                                                       :UNODC ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_15.c ;
                   :has_code "C200206" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-15-0c-01.pdf"^^xsd:anyURI ;
@@ -5211,10 +5211,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNODC ,
+                              :WHO ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_16.1 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNODC ,
-                                                                                       :WHO ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_16.1 ;
                   :has_code "C160101" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-16-01-01.pdf"^^xsd:anyURI ;
@@ -5227,9 +5227,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :OHCHR ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_16.1 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :OHCHR ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_16.1 ;
                   :has_code "C160102" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-16-01-02.pdf"^^xsd:anyURI ;
@@ -5242,9 +5242,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNODC ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_16.1 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNODC ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_16.1 ;
                   :has_code "C160103" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-16-01-03.pdf"^^xsd:anyURI ;
@@ -5257,9 +5257,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNODC ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_16.1 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNODC ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_16.1 ;
                   :has_code "C160105" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-16-01-04.pdf"^^xsd:anyURI ;
@@ -5272,9 +5272,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                             :Concetto ,
                             :Indicatore ,
                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+                   :has_agency :OHCHR ;
                    :has_classification :Livello_2 ;
                    :is_indicator_of :Target_16.10 ;
-                   <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :OHCHR ;
                    <http://www.w3.org/2004/02/skos/core#narrower> :Target_16.10 ;
                    :has_code "C161001" ;
                    :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-16-10-01.pdf"^^xsd:anyURI ;
@@ -5287,9 +5287,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                             :Concetto ,
                             :Indicatore ,
                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+                   :has_agency :UNESCO-UIS ;
                    :has_classification :Livello_1 ;
                    :is_indicator_of :Target_16.10 ;
-                   <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNESCO-UIS ;
                    <http://www.w3.org/2004/02/skos/core#narrower> :Target_16.10 ;
                    :has_code "C161002" ;
                    :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-16-10-02.pdf"^^xsd:anyURI ;
@@ -5302,9 +5302,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNICEF ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_16.2 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNICEF ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_16.2 ;
                   :has_code "C160201" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-16-02-01.pdf"^^xsd:anyURI ;
@@ -5317,9 +5317,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNODC ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_16.2 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNODC ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_16.2 ;
                   :has_code "C160202" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-16-02-02.pdf"^^xsd:anyURI ;
@@ -5332,9 +5332,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNICEF ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_16.2 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNICEF ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_16.2 ;
                   :has_code "C160203" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-16-02-03.pdf"^^xsd:anyURI ;
@@ -5347,9 +5347,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNODC ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_16.3 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNODC ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_16.3 ;
                   :has_code "C160301" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-16-03-01.pdf"^^xsd:anyURI ;
@@ -5362,9 +5362,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNODC ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_16.3 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNODC ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_16.3 ;
                   :has_code "C160302" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-16-03-02.pdf"^^xsd:anyURI ;
@@ -5377,10 +5377,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :OECD ,
+                              :UNODC ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_16.3 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :OECD ,
-                                                                                       :UNODC ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_16.3 ;
                   :has_code "C160303" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-16-03-03.pdf"^^xsd:anyURI ;
@@ -5393,10 +5393,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNCTAD ,
+                              :UNODC ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_16.4 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNCTAD ,
-                                                                                       :UNODC ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_16.4 ;
                   :has_code "C160401" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-16-04-01.pdf"^^xsd:anyURI ;
@@ -5409,9 +5409,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNODC ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_16.4 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNODC ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_16.4 ;
                   :has_code "C160402" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-16-04-02.pdf"^^xsd:anyURI ;
@@ -5424,9 +5424,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNODC ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_16.5 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNODC ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_16.5 ;
                   :has_code "C160501" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-16-05-01.pdf"^^xsd:anyURI ;
@@ -5439,10 +5439,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNODC ,
+                              :World_Bank ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_16.5 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNODC ,
-                                                                                       :World_Bank ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_16.5 ;
                   :has_code "C160502" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-16-05-02.pdf"^^xsd:anyURI ;
@@ -5455,9 +5455,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :World_Bank ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_16.6 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :World_Bank ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_16.6 ;
                   :has_code "C160601" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-16-06-01.pdf"^^xsd:anyURI ;
@@ -5470,9 +5470,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNDP ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_16.6 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNDP ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_16.6 ;
                   :has_code "C160602" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-16-06-02.pdf"^^xsd:anyURI ;
@@ -5485,10 +5485,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :IPU ,
+                              :UNDP ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_16.7 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :IPU ,
-                                                                                       :UNDP ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_16.7 ;
                   :has_code "C160701" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-16-07-01A.pdf"^^xsd:anyURI ;
@@ -5501,9 +5501,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNDP ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_16.7 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNDP ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_16.7 ;
                   :has_code "C160702" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-16-07-02.pdf"^^xsd:anyURI ;
@@ -5516,9 +5516,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg#DESA/FFDO> ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_16.8 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg#DESA/FFDO> ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_16.8 ;
                   :has_code "C200205" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-16-08-01.pdf"^^xsd:anyURI ;
@@ -5531,10 +5531,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNICEF ,
+                              :UNSD ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_16.9 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNICEF ,
-                                                                                       :UNSD ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_16.9 ;
                   :has_code "C160901" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-16-09-01.pdf"^^xsd:anyURI ;
@@ -5547,9 +5547,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :OHCHR ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_16.a ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :OHCHR ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_16.a ;
                   :has_code "C160a01" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-16-0A-01.pdf"^^xsd:anyURI ;
@@ -5562,9 +5562,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :OHCHR ;
                   :has_classification :Livello_2 ;
                   :is_indicator_of :Target_16.b ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :OHCHR ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_16.b ;
                   :has_code "C200204" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-16-0b-01.pdf"^^xsd:anyURI ;
@@ -5577,9 +5577,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :IMF ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_17.1 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :IMF ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_17.1 ;
                   :has_code "C170101" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-17-01-01.pdf"^^xsd:anyURI ;
@@ -5592,9 +5592,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :IMF ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_17.1 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :IMF ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_17.1 ;
                   :has_code "C170102" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-17-01-02.pdf"^^xsd:anyURI ;
@@ -5607,11 +5607,11 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                             :Concetto ,
                             :Indicatore ,
                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+                   :has_agency :ITU ,
+                               :UNCTAD ,
+                               :WTO ;
                    :has_classification :Livello_1 ;
                    :is_indicator_of :Target_17.10 ;
-                   <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :ITU ,
-                                                                                        :UNCTAD ,
-                                                                                        :WTO ;
                    <http://www.w3.org/2004/02/skos/core#narrower> :Target_17.10 ;
                    :has_code "C171001" ;
                    :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-17-10-01.pdf"^^xsd:anyURI ;
@@ -5624,11 +5624,11 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                             :Concetto ,
                             :Indicatore ,
                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+                   :has_agency :ITU ,
+                               :UNCTAD ,
+                               :WTO ;
                    :has_classification :Livello_1 ;
                    :is_indicator_of :Target_17.11 ;
-                   <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :ITU ,
-                                                                                        :UNCTAD ,
-                                                                                        :WTO ;
                    <http://www.w3.org/2004/02/skos/core#narrower> :Target_17.11 ;
                    :has_code "C171101" ;
                    :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-17-11-01.pdf"^^xsd:anyURI ;
@@ -5641,11 +5641,11 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                             :Concetto ,
                             :Indicatore ,
                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+                   :has_agency :ITU ,
+                               :UNCTAD ,
+                               :WTO ;
                    :has_classification :Livello_1 ;
                    :is_indicator_of :Target_17.12 ;
-                   <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :ITU ,
-                                                                                        :UNCTAD ,
-                                                                                        :WTO ;
                    <http://www.w3.org/2004/02/skos/core#narrower> :Target_17.12 ;
                    :has_code "C171201" ;
                    :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-17-12-01.pdf"^^xsd:anyURI ;
@@ -5658,9 +5658,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                             :Concetto ,
                             :Indicatore ,
                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+                   :has_agency :World_Bank ;
                    :has_classification :Livello_1 ;
                    :is_indicator_of :Target_17.13 ;
-                   <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :World_Bank ;
                    <http://www.w3.org/2004/02/skos/core#narrower> :Target_17.13 ;
                    :has_code "C171301" ;
                    :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-17-13-01.pdf"^^xsd:anyURI ;
@@ -5673,9 +5673,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                             :Concetto ,
                             :Indicatore ,
                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+                   :has_agency :UNEP ;
                    :has_classification :Livello_2 ;
                    :is_indicator_of :Target_17.14 ;
-                   <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNEP ;
                    <http://www.w3.org/2004/02/skos/core#narrower> :Target_17.14 ;
                    :has_code "C171401" ;
                    :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-17-14-01.pdf"^^xsd:anyURI ;
@@ -5688,10 +5688,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                             :Concetto ,
                             :Indicatore ,
                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+                   :has_agency :OECD ,
+                               :UNDP ;
                    :has_classification :Livello_2 ;
                    :is_indicator_of :Target_17.15 ;
-                   <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :OECD ,
-                                                                                        :UNDP ;
                    <http://www.w3.org/2004/02/skos/core#narrower> :Target_17.15 ;
                    :has_code "C171501" ;
                    :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-17-15-01.pdf"^^xsd:anyURI ;
@@ -5704,10 +5704,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                             :Concetto ,
                             :Indicatore ,
                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+                   :has_agency :OECD ,
+                               :UNDP ;
                    :has_classification :Livello_2 ;
                    :is_indicator_of :Target_17.16 ;
-                   <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :OECD ,
-                                                                                        :UNDP ;
                    <http://www.w3.org/2004/02/skos/core#narrower> :Target_17.16 ;
                    :has_code "C171601" ;
                    :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-17-16-01.pdf"^^xsd:anyURI ;
@@ -5720,9 +5720,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                             :Concetto ,
                             :Indicatore ,
                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+                   :has_agency :World_Bank ;
                    :has_classification :Livello_1 ;
                    :is_indicator_of :Target_17.17 ;
-                   <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :World_Bank ;
                    <http://www.w3.org/2004/02/skos/core#narrower> :Target_17.17 ;
                    :has_code "C171702" ;
                    :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-17-17-01.pdf"^^xsd:anyURI ;
@@ -5735,9 +5735,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                             :Concetto ,
                             :Indicatore ,
                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+                   :has_agency :PARIS21 ;
                    :has_classification :Livello_2 ;
                    :is_indicator_of :Target_17.18 ;
-                   <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :PARIS21 ;
                    <http://www.w3.org/2004/02/skos/core#narrower> :Target_17.18 ;
                    :has_code "C171804" ;
                    :has_source "http://metadata.un.org/sdg/C171801?lang=en"^^xsd:anyURI ;
@@ -5750,9 +5750,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                             :Concetto ,
                             :Indicatore ,
                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+                   :has_agency :PARIS21 ;
                    :has_classification :Livello_1 ;
                    :is_indicator_of :Target_17.18 ;
-                   <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :PARIS21 ;
                    <http://www.w3.org/2004/02/skos/core#narrower> :Target_17.18 ;
                    :has_code "C171802" ;
                    :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-17-18-02.pdf"^^xsd:anyURI ;
@@ -5765,8 +5765,8 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                             :Concetto ,
                             :Indicatore ,
                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+                   :has_agency :PARIS21 ;
                    :has_classification :Livello_1 ;
-                   <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :PARIS21 ;
                    :has_code "C171803" ;
                    :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-17-18-03.pdf"^^xsd:anyURI ;
                    rdfs:comment "3 Number of countries with a national statistical plan that is fully funded and under implementation, by source of funding"@en ;
@@ -5778,9 +5778,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                             :Concetto ,
                             :Indicatore ,
                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+                   :has_agency :PARIS21 ;
                    :has_classification :Livello_1 ;
                    :is_indicator_of :Target_17.19 ;
-                   <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :PARIS21 ;
                    <http://www.w3.org/2004/02/skos/core#narrower> :Target_17.19 ;
                    :has_code "C171901" ;
                    :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-17-19-01.pdf"^^xsd:anyURI ;
@@ -5793,9 +5793,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                             :Concetto ,
                             :Indicatore ,
                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+                   :has_agency :UNSD ;
                    :has_classification :Livello_1 ;
                    :is_indicator_of :Target_17.19 ;
-                   <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNSD ;
                    <http://www.w3.org/2004/02/skos/core#narrower> :Target_17.19 ;
                    :has_code "C171902" ;
                    :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-17-19-02a.pdf"^^xsd:anyURI ;
@@ -5808,8 +5808,8 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :OECD ;
                   :has_classification :Livello_1 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :OECD ;
                   :has_code "C170201" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-17-02-01.pdf"^^xsd:anyURI ;
                   rdfs:comment "Net official development assistance, total and to least developed countries, as a proportion of the Organization for Economic Cooperation and Development (OECD) Development Assistance Committee donors’ gross national income (GNI)"@en ;
@@ -5821,9 +5821,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :OECD ,
+                              :UNCTAD ;
                   :has_classification :Livello_1 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :OECD ,
-                                                                                       :UNCTAD ;
                   :has_code "C170304" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-17-03-01.pdf"^^xsd:anyURI ;
                   rdfs:comment "Additional financial resources mobilized for developing countries from multiple sources"@en ;
@@ -5835,8 +5835,8 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :World_Bank ;
                   :has_classification :Livello_1 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :World_Bank ;
                   :has_code "C170302" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-17-03-02.pdf"^^xsd:anyURI ;
                   rdfs:comment "Volume of remittances (in United States dollars) as a proportion of total GDP"@en ;
@@ -5848,8 +5848,8 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :World_Bank ;
                   :has_classification :Livello_1 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :World_Bank ;
                   :has_code "C170401" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-17-04-01.pdf"^^xsd:anyURI ;
                   rdfs:comment "Debt service as a proportion of exports of goods and services"@en ;
@@ -5861,8 +5861,8 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNCTAD ;
                   :has_classification :Livello_2 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNCTAD ;
                   :has_code "C170502" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-17-05-01.pdf"^^xsd:anyURI ;
                   rdfs:comment "Number of countries that adopt and implement investment promotion regimes for developing countries, including the least developed countries"@en ;
@@ -5874,8 +5874,8 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :ITU ;
                   :has_classification :Livello_1 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :ITU ;
                   :has_code "C170602" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-17-06-01.pdf"^^xsd:anyURI ;
                   rdfs:comment "Fixed Internet broadband subscriptions per 100 inhabitants, by speed5"@en ;
@@ -5887,8 +5887,8 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :UNEP-CTCN ;
                   :has_classification :Livello_2 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNEP-CTCN ;
                   :has_code "C170701" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-17-07-01.pdf"^^xsd:anyURI ;
                   rdfs:comment "Total amount of funding for developing countries to promote the development, transfer, dissemination and diffusion of environmentally sound technologies"@en ;
@@ -5900,8 +5900,8 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :ITU ;
                   :has_classification :Livello_1 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :ITU ;
                   :has_code "C170801" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-17-08-01.pdf"^^xsd:anyURI ;
                   rdfs:comment "Proportion of individuals using the Internet"@en ;
@@ -5913,8 +5913,8 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :OECD ;
                   :has_classification :Livello_1 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :OECD ;
                   :has_code "C170901" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-17-09-01.pdf"^^xsd:anyURI ;
                   rdfs:comment "Dollar value of financial and technical assistance (including through North-South, South‑South and triangular cooperation) committed to developing countries"@en ;
@@ -5926,9 +5926,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :FAO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_2.1 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :FAO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_2.1 ;
                  :has_code "C020101" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-02-01-01.pdf"^^xsd:anyURI ;
@@ -5941,9 +5941,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :FAO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_2.1 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :FAO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_2.1 ;
                  :has_code "C020102" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-02-01-02.pdf"^^xsd:anyURI ;
@@ -5956,10 +5956,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNICEF ,
+                             :WHO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_2.2 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNICEF ,
-                                                                                      :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_2.2 ;
                  :has_code "C020201" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-02-02-01.pdf"^^xsd:anyURI ;
@@ -5972,10 +5972,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNICEF ,
+                             :WHO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_2.2 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNICEF ,
-                                                                                      :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_2.2 ;
                  :has_code "C020202" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-02-02-02a.pdf"^^xsd:anyURI ;
@@ -5988,9 +5988,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :WHO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_2.2 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_2.2 ;
                  :has_code "C020203" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-02-02-03.pdf"^^xsd:anyURI ;
@@ -6003,9 +6003,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :FAO ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_2.3 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :FAO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_2.3 ;
                  :has_code "C020301" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-02-03-01.pdf"^^xsd:anyURI ;
@@ -6018,9 +6018,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :FAO ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_2.3 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :FAO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_2.3 ;
                  :has_code "C020302" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-02-03-02.pdf"^^xsd:anyURI ;
@@ -6033,9 +6033,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :FAO ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_2.4 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :FAO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_2.4 ;
                  :has_code "C020401" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-02-04-01.pdf"^^xsd:anyURI ;
@@ -6048,9 +6048,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :FAO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_2.5 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :FAO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_2.5 ;
                  :has_code "C020501" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-02-05-01a.pdf"^^xsd:anyURI ;
@@ -6063,9 +6063,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :FAO ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_2.5 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :FAO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_2.5 ;
                  :has_code "C020503" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-02-05-02.pdf"^^xsd:anyURI ;
@@ -6078,9 +6078,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :FAO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_2.a ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :FAO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_2.a ;
                  :has_code "C020a01" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-02-0A-01.pdf"^^xsd:anyURI ;
@@ -6093,9 +6093,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :OECD ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_2.a ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :OECD ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_2.a ;
                  :has_code "C020a02" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-02-0A-02.pdf"^^xsd:anyURI ;
@@ -6108,9 +6108,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :WTO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_2.b ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :WTO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_2.b ;
                  :has_code "C020b02" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-02-0B-01.pdf"^^xsd:anyURI ;
@@ -6123,9 +6123,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :FAO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_2.c ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :FAO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_2.c ;
                  :has_code "C020c01" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-02-0C-01.pdf"^^xsd:anyURI ;
@@ -6138,9 +6138,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :WHO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.1> ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.1> ;
                  :has_code "C030101" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-03-01-01.pdf"^^xsd:anyURI ;
@@ -6153,10 +6153,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNICEF ,
+                             :WHO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.1> ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNICEF ,
-                                                                                      :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.1> ;
                  :has_code "C030102" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-03-01-02.pdf"^^xsd:anyURI ;
@@ -6169,9 +6169,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNICEF ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.2> ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNICEF ;
                  <http://www.w3.org/2004/02/skos/core#narrower> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.2> ;
                  :has_code "C030201" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-03-02-01.pdf"^^xsd:anyURI ;
@@ -6184,9 +6184,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNICEF ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.2> ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNICEF ;
                  <http://www.w3.org/2004/02/skos/core#narrower> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.2> ;
                  :has_code "C030202" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-03-02-02.pdf"^^xsd:anyURI ;
@@ -6199,9 +6199,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNICEF ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.3> ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNICEF ;
                  <http://www.w3.org/2004/02/skos/core#narrower> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.3> ;
                  :has_code "C030301" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-03-03-01.pdf"^^xsd:anyURI ;
@@ -6214,9 +6214,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :WHO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.3> ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.3> ;
                  :has_code "C030302" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-03-03-02.pdf"^^xsd:anyURI ;
@@ -6229,9 +6229,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :WHO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.3> ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.3> ;
                  :has_code "C030303" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-03-03-03.pdf"^^xsd:anyURI ;
@@ -6244,9 +6244,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :WHO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.3> ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.3> ;
                  :has_code "C030304" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-03-03-04.pdf"^^xsd:anyURI ;
@@ -6259,9 +6259,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :WHO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.3> ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.3> ;
                  :has_code "C030305" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-03-03-05.pdf"^^xsd:anyURI ;
@@ -6274,9 +6274,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :WHO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.4> ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.4> ;
                  :has_code "C030401" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-03-04-01.pdf"^^xsd:anyURI ;
@@ -6289,9 +6289,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :WHO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.4> ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.4> ;
                  :has_code "C030402" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-03-04-02.pdf"^^xsd:anyURI ;
@@ -6304,10 +6304,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNODC ,
+                             :WHO ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.5> ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNODC ,
-                                                                                      :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.5> ;
                  :has_code "C030501" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-03-05-01.pdf"^^xsd:anyURI ;
@@ -6320,9 +6320,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :WHO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.5> ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.5> ;
                  :has_code "C030502" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-03-05-02.pdf"^^xsd:anyURI ;
@@ -6335,9 +6335,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :WHO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.6> ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.6> ;
                  :has_code "C030601" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-03-06-01.pdf"^^xsd:anyURI ;
@@ -6350,9 +6350,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :DESA_Population__Division ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.7> ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :DESA_Population__Division ;
                  <http://www.w3.org/2004/02/skos/core#narrower> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.7> ;
                  :has_code "C030701" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-03-07-01.pdf"^^xsd:anyURI ;
@@ -6365,9 +6365,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :DESA_Population__Division ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.7> ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :DESA_Population__Division ;
                  <http://www.w3.org/2004/02/skos/core#narrower> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.7> ;
                  :has_code "C030702" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-03-07-02.pdf"^^xsd:anyURI ;
@@ -6380,9 +6380,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :WHO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.8> ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.8> ;
                  :has_code "C030801" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-03-08-01.pdf"^^xsd:anyURI ;
@@ -6395,10 +6395,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :WHO ,
+                             :World_Bank ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.8> ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :WHO ,
-                                                                                      :World_Bank ;
                  <http://www.w3.org/2004/02/skos/core#narrower> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.8> ;
                  :has_code "C030802" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-03-08-02.pdf"^^xsd:anyURI ;
@@ -6411,9 +6411,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :WHO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.9> ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.9> ;
                  :has_code "C030901" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-03-09-01.pdf"^^xsd:anyURI ;
@@ -6426,9 +6426,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :WHO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.9> ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.9> ;
                  :has_code "C030902" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-03-09-02.pdf"^^xsd:anyURI ;
@@ -6441,9 +6441,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :WHO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.9> ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.9> ;
                  :has_code "C030903" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-03-09-03.pdf"^^xsd:anyURI ;
@@ -6456,10 +6456,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :WHO ,
+                             :WHO-FCTC ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.a> ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :WHO ,
-                                                                                      :WHO-FCTC ;
                  <http://www.w3.org/2004/02/skos/core#narrower> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.a> ;
                  :has_code "C030a01" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-03-0a-01.pdf"^^xsd:anyURI ;
@@ -6472,10 +6472,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNICEF ,
+                             :WHO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.b> ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNICEF ,
-                                                                                      :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.b> ;
                  :has_code "C030b01" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-03-0b-01.pdf"^^xsd:anyURI ;
@@ -6488,9 +6488,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :OECD ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.b> ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :OECD ;
                  <http://www.w3.org/2004/02/skos/core#narrower> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.b> ;
                  :has_code "C030b02" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-03-0B-02.pdf"^^xsd:anyURI ;
@@ -6503,9 +6503,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :WHO ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.b> ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.b> ;
                  :has_code "C030b03" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-03-0B-03.pdf"^^xsd:anyURI ;
@@ -6518,9 +6518,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :WHO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.c> ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.c> ;
                  :has_code "C030c01" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-03-0C-01.pdf"^^xsd:anyURI ;
@@ -6533,9 +6533,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :WHO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.d> ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.d> ;
                  :has_code "C030d01" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-03-0D-01.pdf"^^xsd:anyURI ;
@@ -6548,9 +6548,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :WHO ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.d> ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##Target_3.d> ;
                  :has_code "C030d02" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-03-0D-02.pdf"^^xsd:anyURI ;
@@ -6563,9 +6563,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNESCO-UIS ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_4.1 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNESCO-UIS ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_4.1 ;
                  :has_code "C040101" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-04-01-01.pdf"^^xsd:anyURI ;
@@ -6578,9 +6578,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNESCO-UIS ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_4.1 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNESCO-UIS ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_4.1 ;
                  :has_code "C040102" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-04-01-02.pdf"^^xsd:anyURI ;
@@ -6593,9 +6593,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNICEF ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_4.2 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNICEF ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_4.2 ;
                  :has_code "C040201" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-04-02-01.pdf"^^xsd:anyURI ;
@@ -6608,9 +6608,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNESCO-UIS ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_4.2 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNESCO-UIS ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_4.2 ;
                  :has_code "C040202" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-04-02-02.pdf"^^xsd:anyURI ;
@@ -6623,9 +6623,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNESCO-UIS ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_4.3 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNESCO-UIS ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_4.3 ;
                  :has_code "C040301" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-04-03-01.pdf"^^xsd:anyURI ;
@@ -6638,10 +6638,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :ITU ,
+                             :UNESCO-UIS ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_4.4 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :ITU ,
-                                                                                      :UNESCO-UIS ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_4.4 ;
                  :has_code "C040401" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-04-04-01.pdf"^^xsd:anyURI ;
@@ -6654,9 +6654,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNESCO-UIS ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_4.5 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNESCO-UIS ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_4.5 ;
                  :has_code "C040501" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-04-05-01.pdf"^^xsd:anyURI ;
@@ -6669,9 +6669,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNESCO-UIS ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_4.6 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNESCO-UIS ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_4.6 ;
                  :has_code "C040601" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-04-06-01.pdf"^^xsd:anyURI ;
@@ -6684,9 +6684,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNESCO-UIS ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_4.7 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNESCO-UIS ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_4.7 ;
                  :has_code "C200306" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-04-07-01.pdf"^^xsd:anyURI ;
@@ -6699,9 +6699,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNESCO-UIS ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_4.a ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNESCO-UIS ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_4.a ;
                  :has_code "C040a01" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-04-0A-01.pdf"^^xsd:anyURI ;
@@ -6714,9 +6714,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :OECD ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_4.b ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :OECD ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_4.b ;
                  :has_code "C040b01" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-04-0B-01.pdf"^^xsd:anyURI ;
@@ -6729,9 +6729,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNESCO-UIS ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_4.c ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNESCO-UIS ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_4.c ;
                  :has_code "C040c01" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-04-0C-01.pdf"^^xsd:anyURI ;
@@ -6744,11 +6744,11 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :OECD_Development_Centre ,
+                             :UN_Women ,
+                             :World_Bank ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_5.1 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :OECD_Development_Centre ,
-                                                                                      :UN_Women ,
-                                                                                      :World_Bank ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_5.1 ;
                  :has_code "C050101" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-05-01-01.pdf"^^xsd:anyURI ;
@@ -6761,13 +6761,13 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNFPA ,
+                             :UNICEF ,
+                             :UNODC ,
+                             :UN_Women ,
+                             :WHO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_5.2 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNFPA ,
-                                                                                      :UNICEF ,
-                                                                                      :UNODC ,
-                                                                                      :UN_Women ,
-                                                                                      :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_5.2 ;
                  :has_code "C050201" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-05-02-01.pdf"^^xsd:anyURI ;
@@ -6780,13 +6780,13 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNFPA ,
+                             :UNICEF ,
+                             :UNODC ,
+                             :UN_Women ,
+                             :WHO ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_5.2 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNFPA ,
-                                                                                      :UNICEF ,
-                                                                                      :UNODC ,
-                                                                                      :UN_Women ,
-                                                                                      :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_5.2 ;
                  :has_code "C050202" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-05-02-02.pdf"^^xsd:anyURI ;
@@ -6799,9 +6799,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNICEF ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_5.3 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNICEF ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_5.3 ;
                  :has_code "C050301" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-05-03-01.pdf"^^xsd:anyURI ;
@@ -6814,9 +6814,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNICEF ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_5.3 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNICEF ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_5.3 ;
                  :has_code "C050302" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-05-03-02.pdf"^^xsd:anyURI ;
@@ -6829,10 +6829,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNSD ,
+                             :UN_Women ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_5.4 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNSD ,
-                                                                                      :UN_Women ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_5.4 ;
                  :has_code "C050401" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-05-04-01.pdf"^^xsd:anyURI ;
@@ -6845,10 +6845,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :IPU ,
+                             :UN_Women ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_5.5 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :IPU ,
-                                                                                      :UN_Women ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_5.5 ;
                  :has_code "C050501" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-05-05-01a.pdf"^^xsd:anyURI ;
@@ -6861,9 +6861,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :ILO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_5.5 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :ILO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_5.5 ;
                  :has_code "C050502" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-05-05-02.pdf"^^xsd:anyURI ;
@@ -6876,9 +6876,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNFPA ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_5.6 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNFPA ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_5.6 ;
                  :has_code "C050601" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-05-06-01.pdf"^^xsd:anyURI ;
@@ -6891,9 +6891,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNFPA ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_5.6 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNFPA ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_5.6 ;
                  :has_code "C050602" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-05-06-02.pdf"^^xsd:anyURI ;
@@ -6906,9 +6906,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :FAO ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_5.a ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :FAO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_5.a ;
                  :has_code "C050a01" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-05-0a-01.pdf"^^xsd:anyURI ;
@@ -6921,9 +6921,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :FAO ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_5.a ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :FAO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_5.a ;
                  :has_code "C050a02" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-05-0A-02.pdf"^^xsd:anyURI ;
@@ -6936,9 +6936,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :ITU ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_5.b ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :ITU ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_5.b ;
                  :has_code "C050b01" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-05-0B-01.pdf"^^xsd:anyURI ;
@@ -6951,10 +6951,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :OECD ,
+                             :UN_Women ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_5.c ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :OECD ,
-                                                                                      :UN_Women ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_5.c ;
                  :has_code "C050c01" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-05-0c-01.pdf"^^xsd:anyURI ;
@@ -6967,10 +6967,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNICEF ,
+                             :WHO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_6.1 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNICEF ,
-                                                                                      :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_6.1 ;
                  :has_code "C060101" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-06-01-01.pdf"^^xsd:anyURI ;
@@ -6983,10 +6983,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNICEF ,
+                             :WHO ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_6.2 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNICEF ,
-                                                                                      :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_6.2 ;
                  :has_code "C060201" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-06-02-01a.pdf"^^xsd:anyURI ;
@@ -6999,11 +6999,11 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UN-Habitat ,
+                             :UNSD ,
+                             :WHO ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_6.3 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UN-Habitat ,
-                                                                                      :UNSD ,
-                                                                                      :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_6.3 ;
                  :has_code "C060303" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-06-03-01.pdf"^^xsd:anyURI ;
@@ -7016,9 +7016,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNEP ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_6.3 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNEP ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_6.3 ;
                  :has_code "C060302" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-06-03-02.pdf"^^xsd:anyURI ;
@@ -7031,9 +7031,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :FAO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_6.4 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :FAO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_6.4 ;
                  :has_code "C060401" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-06-04-01.pdf"^^xsd:anyURI ;
@@ -7046,9 +7046,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :FAO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_6.4 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :FAO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_6.4 ;
                  :has_code "C060402" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-06-04-02.pdf"^^xsd:anyURI ;
@@ -7061,9 +7061,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNEP ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_6.5 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNEP ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_6.5 ;
                  :has_code "C060501" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-06-05-01.pdf"^^xsd:anyURI ;
@@ -7076,10 +7076,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNECE ,
+                             :UNESCO-IHP ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_6.5 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNECE ,
-                                                                                      :UNESCO-IHP ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_6.5 ;
                  :has_code "C060502" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-06-05-02.pdf"^^xsd:anyURI ;
@@ -7092,9 +7092,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNEP ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_6.6 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNEP ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_6.6 ;
                  :has_code "C060601" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-06-06-01a.pdf"^^xsd:anyURI ;
@@ -7107,10 +7107,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :OECD ,
+                             :WHO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_6.a ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :OECD ,
-                                                                                      :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_6.a ;
                  :has_code "C060a01" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-06-0A-01.pdf"^^xsd:anyURI ;
@@ -7123,10 +7123,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :OECD ,
+                             :WHO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_6.b ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :OECD ,
-                                                                                      :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_6.b ;
                  :has_code "C060b01" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-06-0B-01.pdf"^^xsd:anyURI ;
@@ -7139,9 +7139,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :World_Bank ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_7.1 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :World_Bank ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_7.1 ;
                  :has_code "C070101" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-07-01-01.pdf"^^xsd:anyURI ;
@@ -7154,9 +7154,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :WHO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_7.1 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :WHO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_7.1 ;
                  :has_code "C070102" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-07-01-02.pdf"^^xsd:anyURI ;
@@ -7169,11 +7169,11 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :IEA ,
+                             :IRENA ,
+                             :UNSD ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_7.2 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :IEA ,
-                                                                                      :IRENA ,
-                                                                                      :UNSD ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_7.2 ;
                  :has_code "C070201" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-07-02-01.pdf"^^xsd:anyURI ;
@@ -7186,10 +7186,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :IEA ,
+                             :UNSD ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_7.3 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :IEA ,
-                                                                                      :UNSD ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_7.3 ;
                  :has_code "C070301" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-07-03-01.pdf"^^xsd:anyURI ;
@@ -7202,10 +7202,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :IRENA ,
+                             :OECD ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_7.a ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :IRENA ,
-                                                                                      :OECD ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_7.a ;
                  :has_code "C070a01" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-07-0a-01.pdf"^^xsd:anyURI ;
@@ -7218,9 +7218,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :IRENA ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_7.b ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :IRENA ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_7.b ;
                  :has_code "C200208" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-07-0b-01.pdf"^^xsd:anyURI ;
@@ -7233,9 +7233,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNSD ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_8.1 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNSD ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_8.1 ;
                  :has_code "C080101" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-08-01-01.pdf"^^xsd:anyURI ;
@@ -7248,9 +7248,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :IMF ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_8.10 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :IMF ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_8.10 ;
                   :has_code "C081001" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-08-10-01.pdf"^^xsd:anyURI ;
@@ -7263,9 +7263,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                            :Concetto ,
                            :Indicatore ,
                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  :has_agency :World_Bank ;
                   :has_classification :Livello_1 ;
                   :is_indicator_of :Target_8.10 ;
-                  <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :World_Bank ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :Target_8.10 ;
                   :has_code "C081002" ;
                   :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-08-10-02.pdf"^^xsd:anyURI ;
@@ -7278,9 +7278,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :ILO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_8.2 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :ILO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_8.2 ;
                  :has_code "C080201" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-08-02-01.pdf"^^xsd:anyURI ;
@@ -7293,9 +7293,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :ILO ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_8.3 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :ILO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_8.3 ;
                  :has_code "C080302" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-08-03-01.pdf"^^xsd:anyURI ;
@@ -7308,9 +7308,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNEP ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_8.4 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNEP ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_8.4 ;
                  :has_code "C200202" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-08-04-01.pdf"^^xsd:anyURI ;
@@ -7323,9 +7323,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNEP ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_8.4 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNEP ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_8.4 ;
                  :has_code "C200203" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-08-04-02.pdf"^^xsd:anyURI ;
@@ -7338,9 +7338,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :ILO ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_8.5 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :ILO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_8.5 ;
                  :has_code "C080501" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-08-05-01.pdf"^^xsd:anyURI ;
@@ -7353,9 +7353,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :ILO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_8.5 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :ILO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_8.5 ;
                  :has_code "C080502" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-08-05-02.pdf"^^xsd:anyURI ;
@@ -7368,9 +7368,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :ILO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_8.6 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :ILO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_8.6 ;
                  :has_code "C080601" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-08-06-01.pdf"^^xsd:anyURI ;
@@ -7383,10 +7383,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :ILO ,
+                             :UNICEF ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_8.7 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :ILO ,
-                                                                                      :UNICEF ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_8.7 ;
                  :has_code "C080701" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-08-07-01.pdf"^^xsd:anyURI ;
@@ -7399,9 +7399,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :ILO ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_8.8 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :ILO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_8.8 ;
                  :has_code "C080801" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-08-08-01.pdf"^^xsd:anyURI ;
@@ -7414,9 +7414,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :ILO ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_8.8 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :ILO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_8.8 ;
                  :has_code "C080802" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-08-08-02.pdf"^^xsd:anyURI ;
@@ -7429,9 +7429,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNWTO ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_8.9 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNWTO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_8.9 ;
                  :has_code "C080901" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-08-09-01.pdf"^^xsd:anyURI ;
@@ -7444,9 +7444,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNWTO ;
                  :has_classification :Livello_3 ;
                  :is_indicator_of :Target_8.9 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNWTO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_8.9 ;
                  :has_code "C080902" ;
                  :has_source "http://metadata.un.org/sdg/C080902?lang=en"^^xsd:anyURI ;
@@ -7459,9 +7459,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :OECD ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_8.a ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :OECD ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_8.a ;
                  :has_code "C080a01" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-08-0A-01.pdf"^^xsd:anyURI ;
@@ -7474,9 +7474,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :ILO ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_8.b ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :ILO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_8.b ;
                  :has_code "C080b01" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-08-0b-01.pdf"^^xsd:anyURI ;
@@ -7489,9 +7489,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :World_Bank ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_9.1 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :World_Bank ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_9.1 ;
                  :has_code "C090101" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-09-01-01.pdf"^^xsd:anyURI ;
@@ -7504,10 +7504,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :ICAO ,
+                             :ITF-OECD ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_9.1 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :ICAO ,
-                                                                                      :ITF-OECD ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_9.1 ;
                  :has_code "C090102" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-09-01-02.pdf"^^xsd:anyURI ;
@@ -7520,9 +7520,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNIDO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_9.2 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNIDO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_9.2 ;
                  :has_code "C090201" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-09-02-01.pdf"^^xsd:anyURI ;
@@ -7535,9 +7535,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNIDO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_9.2 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNIDO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_9.2 ;
                  :has_code "C090202" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-09-02-02.pdf"^^xsd:anyURI ;
@@ -7550,9 +7550,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNIDO ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_9.3 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNIDO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_9.3 ;
                  :has_code "C090301" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-09-03-01.pdf"^^xsd:anyURI ;
@@ -7565,10 +7565,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNIDO ,
+                             :World_Bank ;
                  :has_classification :Livello_2 ;
                  :is_indicator_of :Target_9.3 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNIDO ,
-                                                                                      :World_Bank ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_9.3 ;
                  :has_code "C090302" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-09-03-02.pdf"^^xsd:anyURI ;
@@ -7581,10 +7581,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :IEA ,
+                             :UNIDO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_9.4 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :IEA ,
-                                                                                      :UNIDO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_9.4 ;
                  :has_code "C090401" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-09-04-01.pdf"^^xsd:anyURI ;
@@ -7597,9 +7597,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNESCO-UIS ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_9.5 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNESCO-UIS ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_9.5 ;
                  :has_code "C090501" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-09-05-01.pdf"^^xsd:anyURI ;
@@ -7612,9 +7612,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNESCO-UIS ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_9.5 ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNESCO-UIS ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_9.5 ;
                  :has_code "C090502" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-09-05-02.pdf"^^xsd:anyURI ;
@@ -7627,9 +7627,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :OECD ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_9.a ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :OECD ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_9.a ;
                  :has_code "C090a01" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-09-0A-01.pdf"^^xsd:anyURI ;
@@ -7642,9 +7642,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :UNIDO ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_9.b ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :UNIDO ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_9.b ;
                  :has_code "C090b01" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-09-0B-01.pdf"^^xsd:anyURI ;
@@ -7657,9 +7657,9 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ;
                           :Concetto ,
                           :Indicatore ,
                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 :has_agency :ITU ;
                  :has_classification :Livello_1 ;
                  :is_indicator_of :Target_9.c ;
-                 <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg##has_agency> :ITU ;
                  <http://www.w3.org/2004/02/skos/core#narrower> :Target_9.c ;
                  :has_code "C090c01" ;
                  :has_source "https://unstats.un.org/sdgs/metadata/files/Metadata-09-0C-01.pdf"^^xsd:anyURI ;

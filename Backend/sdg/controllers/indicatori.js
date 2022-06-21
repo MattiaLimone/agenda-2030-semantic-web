@@ -19,8 +19,9 @@ exports.getIndicators = async (req, res, next) => {
     const bindingsStream = await myEngine.queryBindings(`
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX sdg: <http://www.semanticweb.org/mlimo/ontologies/2022/4/sdg#> 
-
-    SELECT ?Indicator ?IndicatorLabel ?IndicatorComment ?Tier ?source ?TierComment ?TierLabel
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    
+    SELECT ?Indicator ?IndicatorLabel ?IndicatorComment ?Tier ?source ?TierComment ?TierLabel ?agency ?LabelAgency
     WHERE {
     	?Target a sdg:Target.
   		?Target rdfs:label "`+ req.query.res + `".
@@ -32,7 +33,10 @@ exports.getIndicators = async (req, res, next) => {
   		?Tier rdfs:comment ?TierComment.
   		?Tier rdfs:label ?TierLabel.
         ?Indicator sdg:has_classification ?Tier.
-  		?Indicator sdg:is_indicator_of ?Target.	
+  		?Indicator sdg:is_indicator_of ?Target.
+  		?agency a dbo:Organisation.
+  		?agency rdfs:label ?LabelAgency.
+  		?Indicator sdg:has_agency ?agency.	
     }
     ORDER BY ASC(?IndicatorLabel)
     `, {
@@ -47,7 +51,9 @@ exports.getIndicators = async (req, res, next) => {
             'tier': binding.get('Tier').value,
             'source': binding.get('source').value,
             'tierLabel': binding.get('TierLabel').value,
-            'tierComment': binding.get('TierComment').value
+            'tierComment': binding.get('TierComment').value,
+            'agency': binding.get('agency').value,
+            'labelAgency': binding.get('LabelAgency').value,
         }
         response.push(item)
     });

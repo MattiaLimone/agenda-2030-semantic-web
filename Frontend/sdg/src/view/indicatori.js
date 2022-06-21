@@ -106,9 +106,23 @@ function Indicatori(props) {
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                   >
-                    <Typography>{item.label}</Typography>
+                    <Typography><Button variant="outlined"
+                            style={{margin: 5}}>{item.tierLabel}</Button> {item.label}</Typography>
                   </AccordionSummary>
+
+
                   <AccordionDetails>
+                    <Typography>
+                      Agency :
+                      <Button onClick={() => hyperLinkChange(item.agency)} variant="outlined"
+                            style={{margin: 5}}>{item.labelAgency}</Button>
+                    
+                    </Typography>
+                    <Typography>
+                      Source :
+                      <Button onClick={() => hyperLinkChange(item.source)} variant="outlined"
+                            style={{margin: 5}}>Open Source</Button>
+                    </Typography>
                     <Typography>
                       {item.comment}
                     </Typography>
@@ -119,13 +133,7 @@ function Indicatori(props) {
                         )
                       }
                     })}
-                    <Fab variant="extended" color="inherit" size="small" aria-label="add" style={{ marginTop: 15, marginBottom: 15, alignSelf: 'flex-end' }}>
-                      LEVEL:{item.tierLabel}
-                    </Fab>
-                    <Fab variant="extended" color="primary" size="small" aria-label="add" style={{ marginTop: 15, marginBottom: 15, alignSelf: 'flex-end' }} onClick={() => hyperLinkChange(item.source)}>
-                      <ReadMoreIcon sx={{ mr: 1 }} />
-                      Open Source
-                    </Fab>
+                   
                   </AccordionDetails>
                 </Accordion>
               )
