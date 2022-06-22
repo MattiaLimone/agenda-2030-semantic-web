@@ -92,7 +92,7 @@ exports.getTiers = async (req, res, next) => {
         ?Indicator sdg:has_classification ?Tier.
   		?Indicator sdg:is_indicator_of ?Target.	
     }
-ORDER BY ASC(?TierLabel)
+    ORDER BY ASC(?TierLabel)
     `, {
         sources: ['http://localhost:3000/sparql'],
     });
