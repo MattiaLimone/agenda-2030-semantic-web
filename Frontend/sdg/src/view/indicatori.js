@@ -114,7 +114,7 @@ function Indicatori(props) {
                   <AccordionDetails>
                     <Typography>
                       Agency :
-                      <Button onClick={() => hyperLinkChange(item.agency)} variant="outlined"
+                      <Button onClick={() => hyperLinkChange("https://dbpedia.org/page/"+item.labelAgency.replace(/ /g,"_"))} variant="outlined"
                             style={{margin: 5}}>{item.labelAgency}</Button>
                     
                     </Typography>
