@@ -1,5 +1,5 @@
 ## - How to start sparql local server
-1. cd Backend/swea
+1. cd Backend/sdg
 2. npm install -g @comunica/query-sparql-file
 3. comunica-sparql-file-http Ontology\sdg_final.ttl
 4. sparql service default config localhost:3000
